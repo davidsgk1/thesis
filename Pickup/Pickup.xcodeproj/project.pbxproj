@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26E769AAD6443A5C7443CABA /* Pods_PickupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE938918AEEB38ECA1D6C425 /* Pods_PickupTests.framework */; };
 		831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC91F22188A3B00112BFB /* AppDelegate.swift */; };
 		831BC92222188A3B00112BFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC92122188A3B00112BFB /* ViewController.swift */; };
 		831BC92522188A3B00112BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831BC92322188A3B00112BFB /* Main.storyboard */; };
@@ -17,10 +16,9 @@
 		831BC94022188A3D00112BFB /* PickupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC93F22188A3D00112BFB /* PickupUITests.swift */; };
 		831BC95922188B9F00112BFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831BC95822188B9F00112BFB /* Localizable.strings */; };
 		831BC95C22188ED000112BFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 831BC95B22188ED000112BFB /* Default-568h@2x.png */; };
+		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
-		86A4EF37D588338DFA6EEEAC /* Pods_PickupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6526E411FD8E7A5FF80389 /* Pods_PickupUITests.framework */; };
-		BAAF06F60B5A737F4F9CE591 /* Pods_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE91D0FB4297BBAF3B44EEB /* Pods_Pickup.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +36,37 @@
 			remoteGlobalIDString = 831BC91B22188A3B00112BFB;
 			remoteInfo = Pickup;
 		};
+		83B2FF902218A7F7007E6C6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C42F35001C057E03000E937C;
+			remoteInfo = AudioKit;
+		};
+		83B2FF922218A7F7007E6C6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA7D07011F4E63C200707706;
+			remoteInfo = AudioKitUI;
+		};
+		83B2FF942218A810007E6C6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C42F34FF1C057E03000E937C;
+			remoteInfo = AudioKit;
+		};
+		83E036F72218B26300D017BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA7D07001F4E63C200707706;
+			remoteInfo = AudioKitUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AE91D0FB4297BBAF3B44EEB /* Pods_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2419AB24356546966AD345D7 /* Pods-PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		831BC91C22188A3B00112BFB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,12 +85,23 @@
 		831BC95822188B9F00112BFB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		831BC95A22188C1600112BFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		831BC95B22188ED000112BFB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		83A8ABDE2218A536008A7B67 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = "Pickup/AudioKit-4.6/Frameworks"; sourceTree = "<group>"; };
+		83B2FF742218A5DF007E6C6C /* build_frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_frameworks.sh; path = "Pickup/AudioKit-4.6/Frameworks/build_frameworks.sh"; sourceTree = "<group>"; };
+		83B2FF752218A5DF007E6C6C /* build_packages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_packages.sh; path = "Pickup/AudioKit-4.6/Frameworks/build_packages.sh"; sourceTree = "<group>"; };
+		83B2FF762218A5DF007E6C6C /* simulator-travis.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "simulator-travis.xcconfig"; path = "Pickup/AudioKit-4.6/Frameworks/simulator-travis.xcconfig"; sourceTree = "<group>"; };
+		83B2FF772218A5DF007E6C6C /* simulator.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = simulator.xcconfig; path = "Pickup/AudioKit-4.6/Frameworks/simulator.xcconfig"; sourceTree = "<group>"; };
+		83B2FF782218A5DF007E6C6C /* device.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = device.xcconfig; path = "Pickup/AudioKit-4.6/Frameworks/device.xcconfig"; sourceTree = "<group>"; };
+		83B2FF792218A5DF007E6C6C /* fix_paths.sed */ = {isa = PBXFileReference; lastKnownFileType = text; name = fix_paths.sed; path = "Pickup/AudioKit-4.6/Frameworks/fix_paths.sed"; sourceTree = "<group>"; };
+		83B2FF7A2218A5DF007E6C6C /* AudioKit.podspec.json.tmpl */ = {isa = PBXFileReference; lastKnownFileType = text; name = AudioKit.podspec.json.tmpl; path = "Pickup/AudioKit-4.6/Frameworks/AudioKit.podspec.json.tmpl"; sourceTree = "<group>"; };
+		83B2FF7B2218A5DF007E6C6C /* distribute_built_frameworks.sh_example */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = distribute_built_frameworks.sh_example; path = "Pickup/AudioKit-4.6/Frameworks/distribute_built_frameworks.sh_example"; sourceTree = "<group>"; };
+		83B2FF7C2218A5DF007E6C6C /* fix-framework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "fix-framework.sh"; path = "Pickup/AudioKit-4.6/Frameworks/fix-framework.sh"; sourceTree = "<group>"; };
+		83B2FF7D2218A5DF007E6C6C /* push-pod.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "push-pod.sh"; path = "Pickup/AudioKit-4.6/Frameworks/push-pod.sh"; sourceTree = "<group>"; };
+		83B2FF7E2218A5DF007E6C6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Pickup/AudioKit-4.6/Frameworks/README.md"; sourceTree = "<group>"; };
+		83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "Pickup/AudioKit-4.6/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
-		BE938918AEEB38ECA1D6C425 /* Pods_PickupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39909D19324D9C88B8FA481 /* Pods-PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.release.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.release.xcconfig"; sourceTree = "<group>"; };
 		F5B42FAE6FA7BAFB281A4700 /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
-		FA6526E411FD8E7A5FF80389 /* Pods_PickupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2240850550BD014B1D0A36 /* Pods-PickupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.debug.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF9518D4BCC2B11A90A1F84B /* Pods-Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.release.xcconfig"; path = "Target Support Files/Pods-Pickup/Pods-Pickup.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAAF06F60B5A737F4F9CE591 /* Pods_Pickup.framework in Frameworks */,
+				83B2FF892218A5DF007E6C6C /* README.md in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E769AAD6443A5C7443CABA /* Pods_PickupTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86A4EF37D588338DFA6EEEAC /* Pods_PickupUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +135,7 @@
 		831BC91322188A3B00112BFB = {
 			isa = PBXGroup;
 			children = (
+				83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */,
 				831BC91E22188A3B00112BFB /* Pickup */,
 				831BC93322188A3D00112BFB /* PickupTests */,
 				831BC93E22188A3D00112BFB /* PickupUITests */,
@@ -228,6 +263,15 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		83B2FF8C2218A7F7007E6C6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83B2FF912218A7F7007E6C6C /* AudioKit.framework */,
+				83B2FF932218A7F7007E6C6C /* AudioKitUI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8E300048A60566FF51CCDF38 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,16 +282,24 @@
 				FE2240850550BD014B1D0A36 /* Pods-PickupUITests.debug.xcconfig */,
 				7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		AD8C85007715A05AAA512F9A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1AE91D0FB4297BBAF3B44EEB /* Pods_Pickup.framework */,
-				BE938918AEEB38ECA1D6C425 /* Pods_PickupTests.framework */,
-				FA6526E411FD8E7A5FF80389 /* Pods_PickupUITests.framework */,
+				83B2FF7A2218A5DF007E6C6C /* AudioKit.podspec.json.tmpl */,
+				83B2FF742218A5DF007E6C6C /* build_frameworks.sh */,
+				83B2FF752218A5DF007E6C6C /* build_packages.sh */,
+				83B2FF782218A5DF007E6C6C /* device.xcconfig */,
+				83B2FF7B2218A5DF007E6C6C /* distribute_built_frameworks.sh_example */,
+				83B2FF792218A5DF007E6C6C /* fix_paths.sed */,
+				83B2FF7C2218A5DF007E6C6C /* fix-framework.sh */,
+				83B2FF7D2218A5DF007E6C6C /* push-pod.sh */,
+				83B2FF7E2218A5DF007E6C6C /* README.md */,
+				83B2FF762218A5DF007E6C6C /* simulator-travis.xcconfig */,
+				83B2FF772218A5DF007E6C6C /* simulator.xcconfig */,
+				83A8ABDE2218A536008A7B67 /* Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,6 +320,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				83B2FF952218A810007E6C6C /* PBXTargetDependency */,
+				83E036F82218B26300D017BF /* PBXTargetDependency */,
 			);
 			name = Pickup;
 			productName = Pickup;
@@ -346,6 +400,12 @@
 			mainGroup = 831BC91322188A3B00112BFB;
 			productRefGroup = 831BC91D22188A3B00112BFB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 83B2FF8C2218A7F7007E6C6C /* Products */;
+					ProjectRef = 83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				831BC91B22188A3B00112BFB /* Pickup */,
@@ -354,6 +414,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		83B2FF912218A7F7007E6C6C /* AudioKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKit.framework;
+			remoteRef = 83B2FF902218A7F7007E6C6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83B2FF932218A7F7007E6C6C /* AudioKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioKitUI.framework;
+			remoteRef = 83B2FF922218A7F7007E6C6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		831BC91A22188A3B00112BFB /* Resources */ = {
@@ -516,6 +593,16 @@
 			target = 831BC91B22188A3B00112BFB /* Pickup */;
 			targetProxy = 831BC93C22188A3D00112BFB /* PBXContainerItemProxy */;
 		};
+		83B2FF952218A810007E6C6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AudioKit;
+			targetProxy = 83B2FF942218A810007E6C6C /* PBXContainerItemProxy */;
+		};
+		83E036F82218B26300D017BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AudioKitUI;
+			targetProxy = 83E036F72218B26300D017BF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -665,6 +752,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"csound\"",
+					"-l\"sndfile\"",
+					"-framework",
+					"\"AudioKit\"",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pickup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -682,6 +778,15 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"csound\"",
+					"-l\"sndfile\"",
+					"-framework",
+					"\"AudioKit\"",
+					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pickup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
