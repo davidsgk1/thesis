@@ -26,15 +26,6 @@ class LearningViewController: UIViewController {
     let noteNamesWithSharps = ["C", "C♯", "D", "D♯", "E", "F", "F♯", "G", "G♯", "A", "A♯", "B"]
     let noteNamesWithFlats = ["C", "D♭", "D", "E♭", "E", "F", "G♭", "G", "A♭", "A", "B♭", "B"]
     
-//    func setupPlot() {
-//        let plot = AKNodeOutputPlot(mic, frame: audioInputPlot.bounds)
-//        plot.plotType = .rolling
-//        plot.shouldFill = true
-//        plot.shouldMirror = true
-//        plot.color = UIColor.blue
-//        audioInputPlot.addSubview(plot)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +46,6 @@ class LearningViewController: UIViewController {
         } catch {
             AKLog("AudioKit did not start!")
         }
-//        setupPlot()
         Timer.scheduledTimer(timeInterval: 0.5,
                              target: self,
                              selector: #selector(LearningViewController.updateUI),
@@ -86,8 +76,11 @@ class LearningViewController: UIViewController {
                 }
             }
             let octave = Int(log2f(Float(tracker.frequency) / frequency))
-            noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])\(octave)"
-            noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])\(octave)"
+//            noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])\(octave)"
+//            noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])\(octave)"
+            noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])"
+            noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])"
+
         }
         amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
     }
