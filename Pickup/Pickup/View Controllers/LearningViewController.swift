@@ -9,6 +9,8 @@
 import UIKit
 import AudioKit
 import AudioKitUI
+import CoreGraphics
+@IBDesignable
 
 class LearningViewController: UIViewController {
     
@@ -17,6 +19,11 @@ class LearningViewController: UIViewController {
     @IBOutlet private var noteNameWithSharpsLabel: UILabel!
     @IBOutlet private var noteNameWithFlatsLabel: UILabel!
     @IBOutlet private var audioInputPlot: EZAudioPlot!
+    
+    //Button setup
+    @IBOutlet weak var noteButton: UIButton!
+    @IBOutlet weak var minorSwitch: UISwitch!
+    
     
     var mic: AKMicrophone!
     var tracker: AKFrequencyTracker!
@@ -33,8 +40,8 @@ class LearningViewController: UIViewController {
         mic = AKMicrophone()
         tracker = AKFrequencyTracker(mic)
         silence = AKBooster(tracker, gain: 0)
-        print(mic.isStarted)
-        print(tracker.isStarted)
+        makeUI()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +61,7 @@ class LearningViewController: UIViewController {
     }
     
     @objc func updateUI() {
+        
         if tracker.amplitude > 0.1 {
             frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             
@@ -75,7 +83,7 @@ class LearningViewController: UIViewController {
                     minDistance = distance
                 }
             }
-            let octave = Int(log2f(Float(tracker.frequency) / frequency))
+//            let octave = Int(log2f(Float(tracker.frequency) / frequency))
 //            noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])\(octave)"
 //            noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])\(octave)"
             noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])"
@@ -84,5 +92,21 @@ class LearningViewController: UIViewController {
         }
         amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
     }
-
+    
+    func makeUI() {
+        let myGreen = UIColor(red: 60.0/255, green: 163.0/255, blue: 15.0/255, alpha: 1.0)
+        let myLightGreen = UIColor(red: 60.0/255, green: 163.0/255, blue: 15.0/255, alpha: 0.85)
+        noteButton.layer.shadowColor = myGreen.cgColor
+        noteButton.layer.backgroundColor = UIColor.white.cgColor
+        noteButton.layer.shadowOffset = CGSize(width: 0.0, height: 6.0)
+        noteButton.layer.masksToBounds = false
+        noteButton.layer.shadowRadius = 5.0
+        noteButton.layer.shadowOpacity = 0.5
+        noteButton.layer.cornerRadius = noteButton.frame.width / 2
+        noteButton.layer.borderColor = myGreen.cgColor
+        noteButton.layer.borderWidth = 1.0
+        
+        noteNameWithSharpsLabel.textColor = myGreen
+        noteNameWithFlatsLabel.textColor = myLightGreen
+    }
 }
