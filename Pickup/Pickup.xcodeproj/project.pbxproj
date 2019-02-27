@@ -17,6 +17,7 @@
 		831BC95922188B9F00112BFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831BC95822188B9F00112BFB /* Localizable.strings */; };
 		834AB2EA22238B61002701EB /* NoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834AB2E922238B61002701EB /* NoteButton.swift */; };
 		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
+		83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */; };
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +72,7 @@
 		7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		831BC91C22188A3B00112BFB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831BC91F22188A3B00112BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		831BC92122188A3B00112BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		831BC92122188A3B00112BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		831BC92422188A3B00112BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		831BC92622188A3D00112BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		831BC92922188A3D00112BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		83B2FF7D2218A5DF007E6C6C /* push-pod.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "push-pod.sh"; path = "Pickup/AudioKit-4.6/Frameworks/push-pod.sh"; sourceTree = "<group>"; };
 		83B2FF7E2218A5DF007E6C6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Pickup/AudioKit-4.6/Frameworks/README.md"; sourceTree = "<group>"; };
 		83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "Pickup/AudioKit-4.6/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
+		83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = "/Users/keegan/thesis/Pickup/Pickup/View Controllers/Root View Controller/MenuTableViewCell.swift"; sourceTree = "<absolute>"; };
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		D39909D19324D9C88B8FA481 /* Pods-PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.release.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				831BC94F22188A8C00112BFB /* Root View Controller */,
 				83ED0D212218977D0001CE38 /* LearningViewController.swift */,
 				834AB2E922238B61002701EB /* NoteButton.swift */,
+				83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				834AB2EA22238B61002701EB /* NoteButton.swift in Sources */,
 				831BC92222188A3B00112BFB /* ViewController.swift in Sources */,
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
+				83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
