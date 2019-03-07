@@ -15,6 +15,8 @@
 		831BC93522188A3D00112BFB /* PickupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC93422188A3D00112BFB /* PickupTests.swift */; };
 		831BC94022188A3D00112BFB /* PickupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC93F22188A3D00112BFB /* PickupUITests.swift */; };
 		831BC95922188B9F00112BFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 831BC95822188B9F00112BFB /* Localizable.strings */; };
+		833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833281EE22316D9F00B2C573 /* Onboarding.storyboard */; };
+		833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833281F022316EC700B2C573 /* OnboardingPageViewController.swift */; };
 		834AB2EA22238B61002701EB /* NoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834AB2E922238B61002701EB /* NoteButton.swift */; };
 		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
 		83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */; };
@@ -85,6 +87,8 @@
 		831BC94122188A3D00112BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831BC95822188B9F00112BFB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		831BC95A22188C1600112BFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		833281EE22316D9F00B2C573 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		833281F022316EC700B2C573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		834AB2E922238B61002701EB /* NoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteButton.swift; sourceTree = "<group>"; };
 		83A8ABDE2218A536008A7B67 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = "Pickup/AudioKit-4.6/Frameworks"; sourceTree = "<group>"; };
 		83B2FF742218A5DF007E6C6C /* build_frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_frameworks.sh; path = "Pickup/AudioKit-4.6/Frameworks/build_frameworks.sh"; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				83ED0D212218977D0001CE38 /* LearningViewController.swift */,
 				834AB2E922238B61002701EB /* NoteButton.swift */,
 				83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */,
+				833281F022316EC700B2C573 /* OnboardingPageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				831BC95122188AD800112BFB /* Launch Screen */,
 				831BC92322188A3B00112BFB /* Main.storyboard */,
 				83ED0D1F2218918E0001CE38 /* Learning1.storyboard */,
+				833281EE22316D9F00B2C573 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 				831BC92A22188A3D00112BFB /* LaunchScreen.storyboard in Resources */,
 				831BC95922188B9F00112BFB /* Localizable.strings in Resources */,
 				831BC92722188A3D00112BFB /* Assets.xcassets in Resources */,
+				833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */,
 				83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */,
 				831BC92522188A3B00112BFB /* Main.storyboard in Resources */,
 			);
@@ -564,6 +571,7 @@
 				834AB2EA22238B61002701EB /* NoteButton.swift in Sources */,
 				831BC92222188A3B00112BFB /* ViewController.swift in Sources */,
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
+				833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */,
 				83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

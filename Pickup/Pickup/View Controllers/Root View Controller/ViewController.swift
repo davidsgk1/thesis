@@ -62,6 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.descCell.text = menu[indexPath.row].description
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.lightGray.cgColor
+        print(indexPath.row)
         print(menu[indexPath.row].description)
         print(menu[indexPath.row].title)
         return cell

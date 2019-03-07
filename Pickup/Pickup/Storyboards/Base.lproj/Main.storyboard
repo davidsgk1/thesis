@@ -88,6 +88,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="hI6-XN-apA"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-Hk-9aF">
+                                <rect key="frame" x="284" y="104" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Onboarding"/>
+                                <connections>
+                                    <segue destination="yEi-We-avp" kind="show" id="Gjp-ci-NVP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -102,13 +110,21 @@
             </objects>
             <point key="canvasLocation" x="1031.2" y="133.00492610837438"/>
         </scene>
+        <!--OnboardingStoryboard-->
+        <scene sceneID="WcR-Mk-5Id">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" referencedIdentifier="OnboardingStoryboard" id="yEi-We-avp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFe-Ot-YP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649" y="-76"/>
+        </scene>
         <!--LearningViewController-->
         <scene sceneID="lia-ea-RyZ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Learning1" referencedIdentifier="LearningViewController" id="Uhb-l1-Ipi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSG-4o-p8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-141"/>
+            <point key="canvasLocation" x="1743" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TwR-y3-vjW">

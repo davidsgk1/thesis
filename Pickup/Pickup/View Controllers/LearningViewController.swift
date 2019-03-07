@@ -53,7 +53,7 @@ class LearningViewController: UIViewController {
         } catch {
             AKLog("AudioKit did not start!")
         }
-        Timer.scheduledTimer(timeInterval: 0.5,
+        Timer.scheduledTimer(timeInterval: 0.2,
                              target: self,
                              selector: #selector(LearningViewController.updateUI),
                              userInfo: nil,
