@@ -12,6 +12,20 @@ class OnboardingPageViewController: UIPageViewController {
     
     weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
     
+//    var pageControl = UIPageControl()
+//    
+//    func configurePageControl() {
+//        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 30,width: UIScreen.main.bounds.width,height: 30))
+//        self.pageControl.numberOfPages = orderedViewControllers.count
+//        self.pageControl.currentPage = 0
+//        self.pageControl.alpha = 0.5
+//        self.pageControl.tintColor = UIColor.clear
+//        self.pageControl.pageIndicatorTintColor = UIColor.clear
+//        self.pageControl.currentPageIndicatorTintColor = UIColor.white
+//        self.pageControl.backgroundColor = UIColor.clear
+//        self.view.addSubview(pageControl)
+//    }
+    
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController(color: "First"),
                 self.newColoredViewController(color: "Purple"),
@@ -72,8 +86,23 @@ class OnboardingPageViewController: UIPageViewController {
 }
 
 
-
 extension OnboardingPageViewController: UIPageViewControllerDataSource {
+    
+    
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return orderedViewControllers.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        guard let firstViewController = viewControllers?.first,
+            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
+                return 0
+        }
+        
+        return firstViewControllerIndex
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {

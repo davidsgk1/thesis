@@ -18,9 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Pickup." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INa-Iq-WYD">
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstOnboardingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="07S-WI-66Y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="lku-fc-hnv"/>
+                                    <constraint firstAttribute="height" constant="812" id="oF6-mH-TB1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Pickup." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INa-Iq-WYD">
                                 <rect key="frame" x="27" y="105" width="237" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -33,8 +39,23 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="iho-Tf-Ydk">
+                                <rect key="frame" x="66" y="193" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="whw-TD-h05"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yXD-y1-6sE" firstAttribute="trailing" secondItem="iho-Tf-Ydk" secondAttribute="trailing" constant="69" id="0ug-NJ-bxG"/>
+                            <constraint firstItem="INa-Iq-WYD" firstAttribute="leading" secondItem="yXD-y1-6sE" secondAttribute="leading" constant="27" id="Flf-2O-6HK"/>
+                            <constraint firstItem="07S-WI-66Y" firstAttribute="leading" secondItem="H0c-29-rXl" secondAttribute="leading" id="P7E-1r-eED"/>
+                            <constraint firstItem="iho-Tf-Ydk" firstAttribute="leading" secondItem="yXD-y1-6sE" secondAttribute="leading" constant="66" id="WNF-ae-jgl"/>
+                            <constraint firstItem="iho-Tf-Ydk" firstAttribute="top" secondItem="INa-Iq-WYD" secondAttribute="bottom" constant="58" id="Wgb-br-rYJ"/>
+                            <constraint firstItem="07S-WI-66Y" firstAttribute="top" secondItem="iho-Tf-Ydk" secondAttribute="bottom" constant="-433" id="c2a-ZT-3hI"/>
+                            <constraint firstItem="07S-WI-66Y" firstAttribute="top" secondItem="H0c-29-rXl" secondAttribute="top" id="lI3-Bg-Si6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yXD-y1-6sE"/>
                     </view>
                 </viewController>
@@ -64,6 +85,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purpleOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="co5-w1-Qoi">
+                                <rect key="frame" x="87" y="243" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.75686274509803919" green="0.50980392156862742" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="KOk-gI-ivF"/>
@@ -95,6 +120,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="jCu-wG-ggE">
+                                <rect key="frame" x="87" y="240" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.45098039215686275" green="0.68627450980392157" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="Ixz-DI-L4j"/>
@@ -127,6 +156,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="um3-Ti-Gx1">
+                                <rect key="frame" x="87" y="243" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="HTy-0G-7sq"/>
@@ -144,6 +177,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="finalOnboardingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DGw-tB-DA8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ready to play?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVW-eC-5rp">
                                 <rect key="frame" x="16" y="68" width="259" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -152,12 +189,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your first lesson starts now. Let's set up a chord progression. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMq-Aj-CeZ">
-                                <rect key="frame" x="60" y="384" width="255" height="157"/>
+                                <rect key="frame" x="60" y="466" width="255" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="823-wh-Em1">
+                                <rect key="frame" x="84" y="582" width="206" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45098039220000002" green="0.68627450980000004" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="du2-qg-Szc" kind="show" id="960-of-Fou"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="finalOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="EGQ-IZ-Pyj">
+                                <rect key="frame" x="67" y="218" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vw-Nw-HYD">
+                                <rect key="frame" x="135" y="656" width="143" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="take me home first">
+                                    <color key="titleColor" red="0.36078431372549019" green="0.3529411764705882" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Emb-5F-HVS" kind="show" id="4X6-CD-jjJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="exit" translatesAutoresizingMaskIntoConstraints="NO" id="4Gj-ZE-zwe">
+                                <rect key="frame" x="97" y="657" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="B0E-dL-nLs"/>
@@ -166,6 +235,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoV-wF-vqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.8" y="744.82758620689663"/>
+        </scene>
+        <!--MainStoryboard-->
+        <scene sceneID="yVb-k2-XKL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainStoryboard" id="Emb-5F-HVS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tgm-ru-tcQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rx1-Yg-atr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="724"/>
+        </scene>
+        <!--LearningViewController-->
+        <scene sceneID="gma-C7-ewZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Learning1" referencedIdentifier="LearningViewController" id="du2-qg-Szc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABo-qW-PMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2418" y="871"/>
         </scene>
         <!--OnboardingStoryboard-->
         <scene sceneID="oiA-Si-Tog">
@@ -176,4 +263,14 @@
             <point key="canvasLocation" x="-224" y="10"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exit" width="59" height="59"/>
+        <image name="finalOnboarding" width="588" height="588"/>
+        <image name="finalOnboardingBackground" width="867" height="1300"/>
+        <image name="firstOnboarding" width="544" height="544"/>
+        <image name="firstOnboardingBackground" width="3024" height="4032"/>
+        <image name="greenOnboarding" width="424" height="424"/>
+        <image name="purpleOnboarding" width="424" height="424"/>
+        <image name="yellowOnboarding" width="424" height="424"/>
+    </resources>
 </document>
