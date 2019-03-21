@@ -102,7 +102,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="yh9-qP-Dcp"/>
                     <connections>
-                        <outlet property="HomeTableView" destination="Qra-jU-I0d" id="qpC-BJ-onW"/>
                         <outlet property="homeTableView" destination="Qra-jU-I0d" id="th9-Md-Mnh"/>
                     </connections>
                 </viewController>
@@ -132,7 +131,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xLQ-14-DU6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Wm-ZK-WIh">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
