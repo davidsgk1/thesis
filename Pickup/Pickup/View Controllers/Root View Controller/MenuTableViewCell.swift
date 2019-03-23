@@ -11,6 +11,7 @@ class MenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleCell: UILabel!
     @IBOutlet weak var descCell: UILabel!
+    @IBOutlet weak var cellBackground: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

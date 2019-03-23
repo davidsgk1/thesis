@@ -18,28 +18,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var description : String
         var call : String
         var more : String
+        var image : UIImage!
+        var labelColor : String
     }
     
     var menu = [
-        MenuItem(id: 0, title: "LEARNING MODE", description: "Lorem ipsum dude", call: "Start now", more: "Learn more"),
-        MenuItem(id: 1, title: "FREE PLAY", description: "Moresum Lorem ipsum dog", call: "Start now", more: "Learn more"),
-        MenuItem(id: 2, title: "METRONOME", description: "There's going to be a metronome here, I promise dude. Just give me time.", call: "Start now", more: "Learn more")
+        MenuItem(id: 0, title: "Learning mode", description: "Play root notes into your phone and learn what scales fit over custom chord progressions.", call: "Start now", more: "Learn more", image: UIImage(named: "learningMode"), labelColor: "purple"),
+        MenuItem(id: 1, title: "Free play", description: "Learning mode, without quizzes or questions. Just hop in and jam!", call: "Start now", more: "Learn more", image: UIImage(named: "freePlay"), labelColor: "yellow"),
+        MenuItem(id: 2, title: "Metronome", description: "Get some work in playing in time after you’ve studied your scales.", call: "Start now", more: "Learn more", image: UIImage(named: "metronome"), labelColor: "green")
     ]
     
     @IBOutlet weak var homeTableView: UITableView!
     
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return menu.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return 400.0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -57,14 +59,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuTableViewCell", for: indexPath) as! MenuTableViewCell
         
+        //Cell styles
+        cell.cellBackground.layer.shadowColor = UIColor.gray.cgColor
+        cell.cellBackground.layer.shadowOffset = CGSize(width: 2, height: 4)
+        cell.cellBackground.layer.shadowOpacity = 0.7
+        
+        
         //Set cell values here
         cell.titleCell.text = menu[indexPath.row].title
         cell.descCell.text = menu[indexPath.row].description
-        cell.layer.borderWidth = 2
-        cell.layer.borderColor = UIColor.lightGray.cgColor
-        print(indexPath.row)
-        print(menu[indexPath.row].description)
-        print(menu[indexPath.row].title)
+        cell.cellBackground.image = menu[indexPath.row].image
+        cell.cellBackground.clipsToBounds = true
+        cell.cellBackground.layer.cornerRadius = 20
+        cell.layer.borderWidth = 20
+        cell.layer.borderColor = UIColor.clear.cgColor
+        
         return cell
     }
     

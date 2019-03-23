@@ -20,9 +20,141 @@ class LearningViewController: UIViewController {
     @IBOutlet private var noteNameWithFlatsLabel: UILabel!
     @IBOutlet private var audioInputPlot: EZAudioPlot!
     
+    //Popup view set up
+    @IBOutlet weak var popUpView: UIView!
+    //Current Note Label
+    let currentNoteLabel = UILabel(frame: CGRect(x: 0, y: 400, width: 270, height: 200))
+    
+    
+    var sHeight: CGFloat!
+    var sWidth: CGFloat!
+    
+    func showPopUpView() {
+        //defining screen width and height
+        let screenHeight = self.view.frame.size.height
+        let screenWidth = self.view.frame.size.width
+        
+        //Setting up current note label, because it will change
+        currentNoteLabel.text = tempNote
+        currentNoteLabel.center = CGPoint(x: screenWidth/2, y: 200)
+        currentNoteLabel.textAlignment = .center
+        currentNoteLabel.textColor = UIColor.white
+        currentNoteLabel.font = currentNoteLabel.font.withSize(72)
+        currentNoteLabel.layer.opacity = 0.0
+        popUpView.addSubview(currentNoteLabel)
+        
+        popUpView.isHidden = false
+    
+        //Setting up subviews
+        
+        //Descriptor Label
+        let niceWorkLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (screenWidth - 150), height: screenHeight))
+        niceWorkLabel.center = CGPoint(x: screenWidth/2, y: 100)
+        niceWorkLabel.textAlignment = .center
+        niceWorkLabel.text = "Nice work. You played: "
+        niceWorkLabel.textColor = UIColor.white
+        niceWorkLabel.adjustsFontSizeToFitWidth = true
+        niceWorkLabel.font = niceWorkLabel.font.withSize(28)
+        niceWorkLabel.layer.opacity = 0.0
+        popUpView.addSubview(niceWorkLabel)
+        
+        //UI button... here we go
+        let nextChordButton = UIButton(frame: CGRect(x: 0, y: ((screenHeight/4) * 3), width: 290, height: 60))
+        nextChordButton.center = CGPoint(x: screenWidth/2, y: 600)
+        nextChordButton.setTitle("Next Chord", for: .normal)
+        nextChordButton.setTitleColor(UIColor.white, for: .normal)
+        nextChordButton.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        nextChordButton.layer.shadowColor = UIColor.black.cgColor
+        nextChordButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+        nextChordButton.layer.shadowOpacity = 0.1
+        nextChordButton.layer.shadowRadius = 5
+        nextChordButton.showsTouchWhenHighlighted = false
+        nextChordButton.addTarget(self, action: #selector(resetView), for: .touchUpInside)
+        nextChordButton.layer.cornerRadius = 15
+        nextChordButton.layer.opacity = 0.0
+        popUpView.addSubview(nextChordButton)
+        
+        popUpView.frame = CGRect(x: (screenWidth/2), y: (screenHeight/2), width: 100.0, height: 100.0)
+        popUpView.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
+        self.popUpView.layer.cornerRadius = popUpView.frame.size.width / 2
+        self.popUpView.transform = CGAffineTransform(rotationAngle: CGFloat(360 * Double.pi / 180))
+        
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
+            
+            self.popUpView.transform = CGAffineTransform(rotationAngle: CGFloat(-360 * Double.pi / 180))
+            self.popUpView.layer.cornerRadius = 25
+            //Random background colors
+            let red   = CGFloat((arc4random() % 256)) / 255.0
+            let green = CGFloat((arc4random() % 256)) / 255.0
+            let blue  = CGFloat((arc4random() % 256)) / 255.0
+            let alpha = CGFloat(1.0)
+            
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .autoreverse, animations: {
+                self.popUpView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
+            }, completion:nil)
+            
+            UIView.animate(withDuration: 0.2, delay: 0.3, animations: {
+                self.popUpView.layer.cornerRadius = 0
+                self.popUpView.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
+                self.popUpView.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+            })
+            
+            UIView.animate(withDuration: 0.2, delay: 0.7, options: .curveEaseIn, animations: {
+                nextChordButton.layer.opacity = 1.0
+                self.currentNoteLabel.layer.opacity = 1.0
+                niceWorkLabel.layer.opacity = 1.0
+            })
+            
+        })
+        
+        
+        
+    }
+
+    
     //Button setup
     @IBOutlet weak var noteButton: UIButton!
     @IBOutlet weak var minorSwitch: UISwitch!
+    var stopReading: UIButton!
+    
+    @objc func stopAudioKit(_ sender: Any) {
+        addChord()
+        print("chordArr before send: ", chordArr)
+        showPopUpView()
+        do {
+            try AudioKit.stop()
+        } catch {
+            print("AudioKit did not stop.")
+        }
+        stopReading.isHidden = true
+
+    }
+    
+    //Setting up chord array
+    var chordArr = [String]()
+    var currentNote = ""
+    var tempNote = ""
+    
+    func addChord() {
+        if (minorSwitch.isOn) {
+            tempNote = currentNote + "m"
+            chordArr.append(tempNote)
+        }
+        else {
+            tempNote = currentNote
+            chordArr.append(currentNote)
+        }
+    }
+    
+    @objc func resetView(_ sender: UIButton!) {
+        popUpView.isHidden = true
+        do {
+            try AudioKit.start()
+        } catch {
+            print("AudioKit did not stop.")
+        }
+        stopReading.isHidden = false
+    }
     
     
     var mic: AKMicrophone!
@@ -35,7 +167,27 @@ class LearningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("chordArr after send: ", chordArr)
         
+        sHeight = view.frame.size.height
+        sWidth = view.frame.size.width
+        
+        //Setting up the button
+        stopReading = UIButton(frame: CGRect(x: 0, y: (sHeight / 4) * 3, width: 290, height: 60))
+        stopReading.center = CGPoint(x: sWidth / 2, y: (sHeight / 8) * 7)
+        stopReading.setTitle("Next Chord", for: .normal)
+        stopReading.setTitleColor(UIColor.white, for: .normal)
+        stopReading.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        stopReading.layer.shadowColor = UIColor.black.cgColor
+        stopReading.layer.shadowOffset = CGSize(width: 1, height: 3)
+        stopReading.layer.shadowOpacity = 0.1
+        stopReading.layer.shadowRadius = 5
+        stopReading.showsTouchWhenHighlighted = false
+        stopReading.addTarget(self, action: #selector(stopAudioKit), for: .touchUpInside)
+        stopReading.layer.cornerRadius = 15
+        view.addSubview(stopReading)
+        
+        popUpView.isHidden = true;
         AKSettings.audioInputEnabled = true
         mic = AKMicrophone()
         tracker = AKFrequencyTracker(mic)
@@ -63,7 +215,7 @@ class LearningViewController: UIViewController {
     @objc func updateUI() {
         
         if tracker.amplitude > 0.1 {
-            frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
+//            frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             
             var frequency = Float(tracker.frequency)
             while frequency > Float(noteFrequencies[noteFrequencies.count - 1]) {
@@ -88,9 +240,10 @@ class LearningViewController: UIViewController {
 //            noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])\(octave)"
             noteNameWithSharpsLabel.text = "\(noteNamesWithSharps[index])"
             noteNameWithFlatsLabel.text = "\(noteNamesWithFlats[index])"
+            currentNote = noteNamesWithSharps[index]
 
         }
-        amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
+//        amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
     }
     
     func makeUI() {
