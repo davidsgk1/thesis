@@ -25,6 +25,10 @@ class LearningViewController: UIViewController {
     //Current Note Label
     let currentNoteLabel = UILabel(frame: CGRect(x: 0, y: 400, width: 270, height: 200))
     
+    
+    var sHeight: CGFloat!
+    var sWidth: CGFloat!
+    
     func showPopUpView() {
         //defining screen width and height
         let screenHeight = self.view.frame.size.height
@@ -111,7 +115,9 @@ class LearningViewController: UIViewController {
     //Button setup
     @IBOutlet weak var noteButton: UIButton!
     @IBOutlet weak var minorSwitch: UISwitch!
-    @IBAction func stopAudioKit(_ sender: Any) {
+    var stopReading: UIButton!
+    
+    @objc func stopAudioKit(_ sender: Any) {
         addChord()
         print("chordArr before send: ", chordArr)
         showPopUpView()
@@ -120,6 +126,7 @@ class LearningViewController: UIViewController {
         } catch {
             print("AudioKit did not stop.")
         }
+        stopReading.isHidden = true
 
     }
     
@@ -146,6 +153,7 @@ class LearningViewController: UIViewController {
         } catch {
             print("AudioKit did not stop.")
         }
+        stopReading.isHidden = false
     }
     
     
@@ -160,6 +168,25 @@ class LearningViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("chordArr after send: ", chordArr)
+        
+        sHeight = view.frame.size.height
+        sWidth = view.frame.size.width
+        
+        //Setting up the button
+        stopReading = UIButton(frame: CGRect(x: 0, y: (sHeight / 4) * 3, width: 290, height: 60))
+        stopReading.center = CGPoint(x: sWidth / 2, y: (sHeight / 8) * 7)
+        stopReading.setTitle("Next Chord", for: .normal)
+        stopReading.setTitleColor(UIColor.white, for: .normal)
+        stopReading.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        stopReading.layer.shadowColor = UIColor.black.cgColor
+        stopReading.layer.shadowOffset = CGSize(width: 1, height: 3)
+        stopReading.layer.shadowOpacity = 0.1
+        stopReading.layer.shadowRadius = 5
+        stopReading.showsTouchWhenHighlighted = false
+        stopReading.addTarget(self, action: #selector(stopAudioKit), for: .touchUpInside)
+        stopReading.layer.cornerRadius = 15
+        view.addSubview(stopReading)
+        
         popUpView.isHidden = true;
         AKSettings.audioInputEnabled = true
         mic = AKMicrophone()
@@ -188,7 +215,7 @@ class LearningViewController: UIViewController {
     @objc func updateUI() {
         
         if tracker.amplitude > 0.1 {
-            frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
+//            frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
             
             var frequency = Float(tracker.frequency)
             while frequency > Float(noteFrequencies[noteFrequencies.count - 1]) {
@@ -216,7 +243,7 @@ class LearningViewController: UIViewController {
             currentNote = noteNamesWithSharps[index]
 
         }
-        amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
+//        amplitudeLabel.text = String(format: "%0.3f", tracker.amplitude)
     }
     
     func makeUI() {
