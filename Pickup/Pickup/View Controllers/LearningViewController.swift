@@ -131,6 +131,7 @@ class LearningViewController: UIViewController {
     }
     
     //Setting up chord array
+    var chordCount = 0
     var chordArr = [String]()
     var currentNote = ""
     var tempNote = ""
@@ -144,6 +145,7 @@ class LearningViewController: UIViewController {
             tempNote = currentNote
             chordArr.append(currentNote)
         }
+        chordCount = chordCount + 1
     }
     
     @objc func resetView(_ sender: UIButton!) {

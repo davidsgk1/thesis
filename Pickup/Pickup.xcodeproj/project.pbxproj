@@ -18,10 +18,16 @@
 		833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833281EE22316D9F00B2C573 /* Onboarding.storyboard */; };
 		833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833281F022316EC700B2C573 /* OnboardingPageViewController.swift */; };
 		834AB2EA22238B61002701EB /* NoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834AB2E922238B61002701EB /* NoteButton.swift */; };
+		8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */; };
+		8397C1F422493AE600F26BF0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397C1F322493AE600F26BF0 /* QuizViewController.swift */; };
 		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
 		83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */; };
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
+		83F177F422493CB9005EEC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83F177F322493CB9005EEC49 /* GoogleService-Info.plist */; };
+		A3FB5696F615D44316B548B4 /* Pods_PickupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */; };
+		B5600B388271F9501162330C /* Pods_PickupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8730D889BB11DD77CF47B976 /* Pods_PickupTests.framework */; };
+		FB9B26DDAA4739F1CACAA574 /* Pods_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B158118C42757E5770852FCF /* Pods_Pickup.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,7 @@
 /* Begin PBXFileReference section */
 		2419AB24356546966AD345D7 /* Pods-PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831BC91C22188A3B00112BFB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831BC91F22188A3B00112BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		831BC92122188A3B00112BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -90,6 +97,8 @@
 		833281EE22316D9F00B2C573 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		833281F022316EC700B2C573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		834AB2E922238B61002701EB /* NoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteButton.swift; sourceTree = "<group>"; };
+		8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
+		8397C1F322493AE600F26BF0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		83A8ABDE2218A536008A7B67 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = "Pickup/AudioKit-4.6/Frameworks"; sourceTree = "<group>"; };
 		83B2FF742218A5DF007E6C6C /* build_frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_frameworks.sh; path = "Pickup/AudioKit-4.6/Frameworks/build_frameworks.sh"; sourceTree = "<group>"; };
 		83B2FF752218A5DF007E6C6C /* build_packages.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build_packages.sh; path = "Pickup/AudioKit-4.6/Frameworks/build_packages.sh"; sourceTree = "<group>"; };
@@ -106,6 +115,9 @@
 		83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = "/Users/keegan/thesis/Pickup/Pickup/View Controllers/Root View Controller/MenuTableViewCell.swift"; sourceTree = "<absolute>"; };
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
+		83F177F322493CB9005EEC49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8730D889BB11DD77CF47B976 /* Pods_PickupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B158118C42757E5770852FCF /* Pods_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39909D19324D9C88B8FA481 /* Pods-PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.release.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.release.xcconfig"; sourceTree = "<group>"; };
 		F5B42FAE6FA7BAFB281A4700 /* Pods-Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pickup.debug.xcconfig"; path = "Target Support Files/Pods-Pickup/Pods-Pickup.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2240850550BD014B1D0A36 /* Pods-PickupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.debug.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B2FF892218A5DF007E6C6C /* README.md in Frameworks */,
+				FB9B26DDAA4739F1CACAA574 /* Pods_Pickup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5600B388271F9501162330C /* Pods_PickupTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3FB5696F615D44316B548B4 /* Pods_PickupUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,13 +156,13 @@
 		831BC91322188A3B00112BFB = {
 			isa = PBXGroup;
 			children = (
-				83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */,
 				831BC91E22188A3B00112BFB /* Pickup */,
 				831BC93322188A3D00112BFB /* PickupTests */,
 				831BC93E22188A3D00112BFB /* PickupUITests */,
 				831BC91D22188A3B00112BFB /* Products */,
 				8E300048A60566FF51CCDF38 /* Pods */,
 				AD8C85007715A05AAA512F9A /* Frameworks */,
+				83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +183,7 @@
 				831BC94E22188A7D00112BFB /* View Controllers */,
 				831BC95022188A9F00112BFB /* Storyboards */,
 				831BC92B22188A3D00112BFB /* Info.plist */,
+				83F177F322493CB9005EEC49 /* GoogleService-Info.plist */,
 				831BC95422188B0300112BFB /* Resources */,
 				831BC95622188B4500112BFB /* Supporting Files */,
 				831BC95722188B6D00112BFB /* Localization */,
@@ -210,6 +226,7 @@
 				834AB2E922238B61002701EB /* NoteButton.swift */,
 				83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */,
 				833281F022316EC700B2C573 /* OnboardingPageViewController.swift */,
+				8397C1F322493AE600F26BF0 /* QuizViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -229,6 +246,7 @@
 				831BC92322188A3B00112BFB /* Main.storyboard */,
 				83ED0D1F2218918E0001CE38 /* Learning1.storyboard */,
 				833281EE22316D9F00B2C573 /* Onboarding.storyboard */,
+				8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -309,6 +327,9 @@
 				83B2FF762218A5DF007E6C6C /* simulator-travis.xcconfig */,
 				83B2FF772218A5DF007E6C6C /* simulator.xcconfig */,
 				83A8ABDE2218A536008A7B67 /* Frameworks */,
+				B158118C42757E5770852FCF /* Pods_Pickup.framework */,
+				8730D889BB11DD77CF47B976 /* Pods_PickupTests.framework */,
+				7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -447,10 +468,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				831BC92A22188A3D00112BFB /* LaunchScreen.storyboard in Resources */,
+				83F177F422493CB9005EEC49 /* GoogleService-Info.plist in Resources */,
 				831BC95922188B9F00112BFB /* Localizable.strings in Resources */,
 				831BC92722188A3D00112BFB /* Assets.xcassets in Resources */,
 				833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */,
 				83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */,
+				8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */,
 				831BC92522188A3B00112BFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,12 +549,20 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pickup/Pods-Pickup-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AudioKit/AudioKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -568,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */,
+				8397C1F422493AE600F26BF0 /* QuizViewController.swift in Sources */,
 				834AB2EA22238B61002701EB /* NoteButton.swift in Sources */,
 				831BC92222188A3B00112BFB /* ViewController.swift in Sources */,
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
@@ -773,7 +805,7 @@
 					"\"AudioKit\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pickup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pickup.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -800,7 +832,7 @@
 					"\"AudioKit\"",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Pickup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pickup.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

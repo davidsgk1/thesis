@@ -1,16 +1,85 @@
 PODS:
   - AudioKit (2.3)
+  - Firebase (4.12.0):
+    - Firebase/Core (= 4.12.0)
+  - Firebase/Auth (4.12.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.6.0)
+  - Firebase/Core (4.12.0):
+    - FirebaseAnalytics (= 4.1.0)
+    - FirebaseCore (= 4.0.19)
+  - Firebase/Database (4.12.0):
+    - Firebase/Core
+    - FirebaseDatabase (= 4.1.5)
+  - FirebaseAnalytics (4.1.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseAuth (4.6.0):
+    - FirebaseAnalytics (~> 4.1)
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (4.0.19):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (4.1.5):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - leveldb-library (~> 1.18)
+  - FirebaseInstanceID (2.0.10):
+    - FirebaseCore (~> 4.0)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
+  - GTMSessionFetcher/Core (1.1.15)
+  - leveldb-library (1.20)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
   - AudioKit (~> 2.2)
+  - Firebase
+  - Firebase/Auth
+  - Firebase/Core
+  - Firebase/Database
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AudioKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseAuth
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - leveldb-library
+    - nanopb
 
 SPEC CHECKSUMS:
   AudioKit: 393be71739265448039ef268f3582dee82783b0d
+  Firebase: d7fdf40e4d6c841849c52919f437fd3a0009ded0
+  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
+  FirebaseAuth: 85a1b118a89838efc6f6ab3f2b1f94747d72a915
+  FirebaseCore: ff49ebb37e0f63a570d78c4f1c1c0befe8659d5c
+  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
+  FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: 07143622c999be9457afb6fa0bcea82cd1414d36
+PODFILE CHECKSUM: a0deae0d76adff03daafacbebca3d4aa2cb4f65d
 
 COCOAPODS: 1.6.0

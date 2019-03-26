@@ -3,6 +3,10 @@
 
 target 'Pickup' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   pod 'AudioKit', '~> 2.2'
   use_frameworks!
 
