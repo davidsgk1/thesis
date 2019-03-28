@@ -150,13 +150,22 @@ class LearningViewController: UIViewController {
     
     @objc func resetView(_ sender: UIButton!) {
         popUpView.isHidden = true
-        do {
-            try AudioKit.start()
-        } catch {
-            print("AudioKit did not stop.")
+        if (chordArr.count >= 4) {
+            let storyboard: UIStoryboard = UIStoryboard(name: "QuizStoryboard", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "QuizViewController") as! QuizViewController
+            vc.chordArr = chordArr
+            self.show(vc, sender: self)
         }
-        stopReading.isHidden = false
+        else {
+            do {
+                try AudioKit.start()
+            } catch {
+                print("AudioKit did not start.")
+            }
+            stopReading.isHidden = false
+        }
     }
+
     
     
     var mic: AKMicrophone!
@@ -169,7 +178,6 @@ class LearningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("chordArr after send: ", chordArr)
         
         sHeight = view.frame.size.height
         sWidth = view.frame.size.width
@@ -201,6 +209,7 @@ class LearningViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        print("ViewDidAppear audioKit trying to start")
         AudioKit.output = silence
         do {
             try AudioKit.start()
@@ -218,7 +227,8 @@ class LearningViewController: UIViewController {
         
         if tracker.amplitude > 0.1 {
 //            frequencyLabel.text = String(format: "%0.1f", tracker.frequency)
-            
+//            print(tracker.frequency)
+//            print(tracker.amplitude)
             var frequency = Float(tracker.frequency)
             while frequency > Float(noteFrequencies[noteFrequencies.count - 1]) {
                 frequency /= 2.0
