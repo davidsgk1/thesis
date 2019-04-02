@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.127755"
+            timestampString = "575927195.835265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "getMajorScaleNotes(note:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.12852"
+            timestampString = "575927195.8356839"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "setTempChromatic(note:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.129042"
+            timestampString = "575927195.835971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.1294039"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "determineKey()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.129779"
+            timestampString = "575927195.836262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "determineKey()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,12 +74,136 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "575489589.130043"
+            timestampString = "575927195.836533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "determineKey()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/QuizViewController.swift"
+            timestampString = "575927195.836922"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "QuizViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.firstView.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.682287"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.firstView.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.6893719"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.firstView.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.691606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.firstView.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.693611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pickup.QuizViewController"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.695629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "1392">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.QuizViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pickup.QuizViewController&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/QuizViewController.swift"
+                  timestampString = "575842302.697601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "148"
+                  endingLineNumber = "148"
+                  offsetFromSymbolStart = "1314">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/QuizViewController.swift"
+            timestampString = "575927195.8373719"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "firstViewShow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

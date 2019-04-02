@@ -14,16 +14,11 @@ class QuizViewController: UIViewController {
     //Instance variable from other view controller
     var chordArr = [String]()
     
-    //Label set up
-    @IBOutlet weak var chord1: UILabel!
-    @IBOutlet weak var chord2: UILabel!
-    @IBOutlet weak var chord3: UILabel!
-    @IBOutlet weak var chord4: UILabel!
-    
     
     let chromatic = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
     var tempChromatic = [String]()
     
+    //MAJOR KEY SET UP
     struct majorKey {
         var name: String!
         var chords: [String]!
@@ -32,7 +27,7 @@ class QuizViewController: UIViewController {
         var index: Int!
 //        var bluesNotes: [String]!
     }
-    
+
     var majorKeys = [majorKey]()
     
     func setMajorKey(note: String) -> majorKey{
@@ -100,6 +95,63 @@ class QuizViewController: UIViewController {
 //
 //    }
     
+    //MINOR KEY SET UP
+    struct minorKey {
+        var name: String!
+        var chords: [String]!
+        var natural: [String]!
+        var index: Int!
+    }
+    
+    var minorKeys = [minorKey]()
+    
+    func setMinorKey(note: String) -> minorKey {
+        setTempChromatic(note: (note))
+        var newKey = minorKey(name: note, chords:getMinorChords(note: note), natural: getMinorScaleNotes(note: note), index: 0)
+        return newKey
+    }
+    
+    func populateMinorKeys() {
+        for note in chromatic {
+            minorKeys.append(setMinorKey(note: note))
+        }
+    }
+    
+    //Returns an array with each minor chord for the key
+    func getMinorChords(note: String) -> [String]{
+        setTempChromatic(note: note)
+        var minorScale = getMinorScaleNotes(note: note)
+        var minorChordsArr = [String]()
+        minorChordsArr.append(minorScale[0] + "m")
+        minorChordsArr.append(minorScale[1] + "dim")
+        minorChordsArr.append(minorScale[2])
+        minorChordsArr.append(minorScale[3] + "m")
+        minorChordsArr.append(minorScale[4] + "m")
+        minorChordsArr.append(minorScale[5])
+        minorChordsArr.append(minorScale[6])
+        return minorChordsArr
+    }
+    
+    func getMinorScaleNotes(note: String) -> [String] {
+        setTempChromatic(note: note)
+        var minorArr = [String]()
+        let startingNote = tempChromatic.index(of: note)!
+        let secondNote = tempChromatic[startingNote + 2]
+        let thirdNote = tempChromatic[startingNote + 3]
+        let fourthNote = tempChromatic[startingNote + 5]
+        let fifthNote = tempChromatic[startingNote + 7]
+        let sixthNote = tempChromatic[startingNote + 8]
+        let seventhNote = tempChromatic[startingNote + 10]
+        minorArr.append(note)
+        minorArr.append(secondNote)
+        minorArr.append(thirdNote)
+        minorArr.append(fourthNote)
+        minorArr.append(fifthNote)
+        minorArr.append(sixthNote)
+        minorArr.append(seventhNote)
+        return minorArr
+    }
+    
     //rearranges the chromatic starting from a certain index
     func setTempChromatic(note: String) {
         let index = chromatic.index(of: note)!
@@ -121,9 +173,9 @@ class QuizViewController: UIViewController {
         
     }
     
-    var testChordArr = ["E", "F#m", "A", "E"]
+    var testChordArr = ["Am", "Bdim", "C", "Am"]
     //Loops through each key and determines which key the progression is in based on the matching chords
-    func determineKey() {
+    func determineKey() -> String{
         //search each key for the most matching chords
         var max = 0
         var match = ""
@@ -131,7 +183,7 @@ class QuizViewController: UIViewController {
             var index = 0
             for arrChord in testChordArr {
                 if (arrChord == key.name) {
-                    index == index + 2
+                    index = index + 2
                 }
                 for chord in key.chords {
                     if (arrChord == chord) {
@@ -148,8 +200,498 @@ class QuizViewController: UIViewController {
             }
         }
         
-        print(match)
+        let charset = CharacterSet(charactersIn: "m")
+        if (testChordArr[0].rangeOfCharacter(from: charset) != nil) {
+            match = relative(match: match)
+        }
+        
+//        for key in minorKeys {
+//            var index = 0
+//            for arrChord in testChordArr {
+//                if (arrChord == key.name) {
+//                    index = index + 2
+//                }
+//                for chord in key.chords {
+//                    if (arrChord == chord) {
+//                        index = index + 1
+//                    }
+//                }
+//            }
+//            if (index > max) {
+//                match = key.name
+//                max = index
+//            }
+//            else if (index == max) {
+//                match = testChordArr[0]
+//            }
+//        }
+        
+        return match
     }
+    
+    func relative(match: String) -> String {
+        let relativeArr = ["Am", "A#m", "Bm", "Cm", "C#m", "Dm", "D#m", "Em", "Fm", "F#m", "Gm", "G#m"]
+        let spot = chromatic.index(of: match)
+        return relativeArr[spot!]
+    }
+    
+    @IBOutlet weak var firstView: UIView!
+    
+    func firstViewShow() {
+        let screenHeight = self.view.frame.size.height
+        let screenWidth = self.view.frame.size.width
+        
+        firstView.isHidden = false
+        quizView.isHidden = true
+        correctView.isHidden = true
+        falseView.isHidden = true
+        scalesQuiz.isHidden = true
+        
+        //setting up first chord label
+        let firstChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
+        firstChordLabel.center = CGPoint(x: screenWidth/2, y: screenHeight/10)
+        firstChordLabel.textAlignment = .center
+        firstChordLabel.text = testChordArr[0]
+        firstChordLabel.textColor = UIColor.white
+        firstChordLabel.adjustsFontSizeToFitWidth = true
+        firstChordLabel.font = firstChordLabel.font.withSize(45)
+        //background styles
+        firstChordLabel.layer.masksToBounds = true
+        firstChordLabel.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        firstChordLabel.layer.cornerRadius = 50
+        firstView.addSubview(firstChordLabel)
+        
+        //setting up second chord label
+        let secondChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
+        secondChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*2.5)
+        secondChordLabel.textAlignment = .center
+        secondChordLabel.text = testChordArr[1]
+        secondChordLabel.textColor = UIColor.white
+        secondChordLabel.adjustsFontSizeToFitWidth = true
+        secondChordLabel.font = firstChordLabel.font.withSize(45)
+        firstView.addSubview(secondChordLabel)
+        //background styles
+        secondChordLabel.layer.masksToBounds = true
+        secondChordLabel.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        secondChordLabel.layer.cornerRadius = 50
+
+        
+        //setting up third chord label
+        let thirdChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
+        thirdChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*4)
+        thirdChordLabel.textAlignment = .center
+        thirdChordLabel.text = testChordArr[2]
+        thirdChordLabel.textColor = UIColor.white
+        thirdChordLabel.adjustsFontSizeToFitWidth = true
+        thirdChordLabel.font = firstChordLabel.font.withSize(45)
+        firstView.addSubview(thirdChordLabel)
+        //background styles
+        thirdChordLabel.layer.masksToBounds = true
+        thirdChordLabel.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        thirdChordLabel.layer.cornerRadius = 50
+
+        
+        //setting up fourth chord label
+        let fourthChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
+        fourthChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*5.5)
+        fourthChordLabel.textAlignment = .center
+        fourthChordLabel.text = testChordArr[3]
+        fourthChordLabel.textColor = UIColor.white
+        fourthChordLabel.adjustsFontSizeToFitWidth = true
+        fourthChordLabel.font = firstChordLabel.font.withSize(45)
+        firstView.addSubview(fourthChordLabel)
+        //background styles
+        fourthChordLabel.layer.masksToBounds = true
+        fourthChordLabel.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        fourthChordLabel.layer.cornerRadius = 50
+        
+
+        
+        //Setting up UIButton
+        let showQuizButton = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        showQuizButton.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*7)
+        showQuizButton.setTitle("Quiz Me", for: .normal)
+        showQuizButton.setTitleColor(UIColor.white, for: .normal)
+        showQuizButton.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        showQuizButton.layer.shadowColor = UIColor.white.cgColor
+        showQuizButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+        showQuizButton.layer.shadowOpacity = 0.1
+        showQuizButton.layer.shadowRadius = 5
+        showQuizButton.showsTouchWhenHighlighted = false
+        //Add Target Code
+        showQuizButton.addTarget(self, action: #selector(showQuiz), for: .touchUpInside)
+        showQuizButton.layer.cornerRadius = 15
+        firstView.addSubview(showQuizButton)
+        
+        firstView.layer.opacity = 0.0
+    }
+    
+    @IBOutlet weak var quizView: UIView!
+    @objc func showQuiz(_ sender: UIButton!) {
+        quizView.isHidden = false
+        
+        let sHeight = self.view.frame.size.height
+        let sWidth = self.view.frame.size.width
+        //Alright, time to set up some quiz stuff
+        
+        //First Label
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (sWidth - 150), height: (sHeight/10)))
+        titleLabel.center = CGPoint(x:sWidth/2 - 50, y: sHeight/10)
+        titleLabel.textAlignment = .center
+        titleLabel.text = "Identifying Keys"
+        titleLabel.textColor = UIColor.white
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.font = titleLabel.font.withSize(28)
+        quizView.addSubview(titleLabel)
+        
+        //Description label
+        let descriptionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (sWidth - 150), height: (sHeight/10)))
+        descriptionLabel.center = CGPoint(x:sWidth/2 - 30, y: (sHeight/10)*1.7)
+        descriptionLabel.textAlignment = .left
+        descriptionLabel.text = "Great job with the chords. Looking at them, what key do you think this progression is in?"
+        descriptionLabel.textColor = UIColor.white
+        descriptionLabel.numberOfLines = 3
+        descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.font = descriptionLabel.font.withSize(24)
+        quizView.addSubview(descriptionLabel)
+        
+        //chord prog label
+        let chordProgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (sWidth - 150), height: (sHeight/10)))
+        chordProgLabel.center = CGPoint(x:sWidth/2, y: (sHeight/10)*2.5)
+        chordProgLabel.textAlignment = .center
+        chordProgLabel.text = testChordArr[0] + "   " + testChordArr[1] + "   " + testChordArr[2] + "   " + testChordArr[3]
+        chordProgLabel.textColor = UIColor.white
+        chordProgLabel.numberOfLines = 3
+        chordProgLabel.adjustsFontSizeToFitWidth = true
+        chordProgLabel.font = chordProgLabel.font.withSize(26)
+        quizView.addSubview(chordProgLabel)
+        
+        //Generating false answers
+        let key = determineKey()
+        var count = 0
+        var falseAnsOne = ""
+        var falseAnsTwo = ""
+        while (count < 2) {
+            var random = Int.random(in: 0...11)
+            if (chromatic[random] != key && (chromatic[random] != falseAnsOne)) {
+                if (count == 0) {
+                    falseAnsOne = chromatic[random]
+                    count = count + 1
+                }
+                else if (count == 1) {
+                    falseAnsTwo = chromatic[random]
+                    count = count + 1
+                }
+            }
+        }
+        
+        //Generating question buttons
+        let correctButton = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        correctButton.center = CGPoint(x: sWidth/2, y: (sHeight/10)*4)
+        correctButton.setTitle(key, for: .normal)
+        correctButton.setTitleColor(UIColor.white, for: .normal)
+        correctButton.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        correctButton.layer.shadowColor = UIColor.white.cgColor
+        correctButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+        correctButton.layer.shadowOpacity = 0.1
+        correctButton.layer.shadowRadius = 5
+        correctButton.showsTouchWhenHighlighted = false
+        //Add Target Code
+        correctButton.addTarget(self, action: #selector(showCorrect), for: .touchUpInside)
+        correctButton.layer.cornerRadius = 15
+        quizView.addSubview(correctButton)
+        
+        //Two false answers
+        let falseOne = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        falseOne.center = CGPoint(x: sWidth/2, y: (sHeight/10)*5)
+        falseOne.setTitle(falseAnsOne, for: .normal)
+        falseOne.setTitleColor(UIColor.white, for: .normal)
+        falseOne.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        falseOne.layer.shadowColor = UIColor.white.cgColor
+        falseOne.layer.shadowOffset = CGSize(width: 1, height: 3)
+        falseOne.layer.shadowOpacity = 0.1
+        falseOne.layer.shadowRadius = 5
+        falseOne.showsTouchWhenHighlighted = false
+        //Add Target Code
+        falseOne.addTarget(self, action: #selector(showFalse), for: .touchUpInside)
+        falseOne.layer.cornerRadius = 15
+        quizView.addSubview(falseOne)
+        
+        let falseTwo = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        falseTwo.center = CGPoint(x: sWidth/2, y: (sHeight/10)*6)
+        falseTwo.setTitle(falseAnsTwo, for: .normal)
+        falseTwo.setTitleColor(UIColor.white, for: .normal)
+        falseTwo.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        falseTwo.layer.shadowColor = UIColor.white.cgColor
+        falseTwo.layer.shadowOffset = CGSize(width: 1, height: 3)
+        falseTwo.layer.shadowOpacity = 0.1
+        falseTwo.layer.shadowRadius = 5
+        falseTwo.showsTouchWhenHighlighted = false
+        //Add Target Code
+        falseTwo.addTarget(self, action: #selector(showFalse), for: .touchUpInside)
+        falseTwo.layer.cornerRadius = 15
+        quizView.addSubview(falseTwo)
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            self.quizView.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        })
+    }
+    
+    
+    @IBOutlet weak var correctView: UIView!
+    @objc func showCorrect(_ sender: Any) {
+        correctView.isHidden = false
+        
+        //Getting the key object
+        var key = determineKey()
+        let height = correctView.frame.size.height
+        let width = correctView.frame.size.width
+        
+        //Adding blur effect to the background
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = quizView.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        quizView.addSubview(blurEffectView)
+        
+        //Background color
+        correctView.backgroundColor = UIColor.gray
+        correctView.layer.cornerRadius = 15
+        
+        //Adding title label
+        let correctTitle = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/5)))
+        correctTitle.center = CGPoint(x: width/2, y: (height/5))
+        correctTitle.textAlignment = .center
+        correctTitle.text = "Great job!"
+        correctTitle.textColor = UIColor.white
+        correctTitle.adjustsFontSizeToFitWidth = true
+        correctTitle.font = correctTitle.font.withSize(28)
+        correctView.addSubview(correctTitle)
+        
+        //Adding description.
+        let correctDesc = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 30), height: (height/5)*1.5))
+        correctDesc.center = CGPoint(x: width/2, y: (height/5)*2.5)
+        correctDesc.textAlignment = .center
+        correctDesc.text = "The key for this progression is " + key + "! Remember, a key is the tonal center of a progression or song. Typically it's the first or last chord, but doesn't always have to be."
+        correctDesc.textColor = UIColor.white
+        correctDesc.adjustsFontSizeToFitWidth = true
+        correctDesc.numberOfLines = 8
+        correctDesc.font = correctDesc.font.withSize(22)
+        correctView.addSubview(correctDesc)
+        
+        //Adding button to show scales OH BOY
+        let sendToScales = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 45))
+        sendToScales.center = CGPoint(x: width/2, y: (height/5)*4)
+        sendToScales.setTitle("Show Scales", for: .normal)
+        sendToScales.setTitleColor(UIColor.white, for: .normal)
+        sendToScales.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        sendToScales.layer.shadowColor = UIColor.white.cgColor
+        sendToScales.layer.shadowOffset = CGSize(width: 1, height: 3)
+        sendToScales.layer.shadowOpacity = 0.1
+        sendToScales.layer.shadowRadius = 5
+        sendToScales.showsTouchWhenHighlighted = true
+        //Add Target Code
+        sendToScales.addTarget(self, action: #selector(scalesView), for: .touchUpInside)
+        sendToScales.layer.cornerRadius = 15
+        correctView.addSubview(sendToScales)
+        
+    }
+    
+    @IBOutlet weak var scalesQuiz: UIView!
+    @objc func scalesView(_ sender: Any) {
+        scalesQuiz.isHidden = false
+        correctView.isHidden = true
+        quizView.isHidden = true
+        
+        var key = determineKey()
+        let height = scalesQuiz.frame.size.height
+        let width = scalesQuiz.frame.size.width
+        
+        //First Label
+        let title = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/10)))
+        title.center = CGPoint(x:width/2 - 50, y: height/10)
+        title.textAlignment = .center
+        title.text = "Identifying Scales"
+        title.textColor = UIColor.white
+        title.adjustsFontSizeToFitWidth = true
+        title.font = title.font.withSize(28)
+        scalesQuiz.addSubview(title)
+        
+        //Description label
+        let descriptionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/10)))
+        descriptionLabel.center = CGPoint(x:width/2 - 30, y: (height/10)*1.7)
+        descriptionLabel.textAlignment = .left
+        descriptionLabel.text = "The progression is in the key of " + key + ". What scale can you use in that key, knowing your progression?"
+        descriptionLabel.textColor = UIColor.white
+        descriptionLabel.numberOfLines = 3
+        descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.font = descriptionLabel.font.withSize(24)
+        scalesQuiz.addSubview(descriptionLabel)
+        
+        //chord prog label
+        let chordProgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/10)))
+        chordProgLabel.center = CGPoint(x:width/2, y: (height/10)*2.5)
+        chordProgLabel.textAlignment = .center
+        chordProgLabel.text = testChordArr[0] + "   " + testChordArr[1] + "   " + testChordArr[2] + "   " + testChordArr[3]
+        chordProgLabel.textColor = UIColor.white
+        chordProgLabel.numberOfLines = 3
+        chordProgLabel.adjustsFontSizeToFitWidth = true
+        chordProgLabel.font = chordProgLabel.font.withSize(26)
+        scalesQuiz.addSubview(chordProgLabel)
+        
+        //Generating false answers
+        var count = 0
+        var falseAnsOne = ""
+        var falseAnsTwo = ""
+        var falseAnsThree = ""
+        while (count < 3) {
+            var random = Int.random(in: 0...11)
+            if (chromatic[random] != key && (chromatic[random] != falseAnsOne)) {
+                if (count == 0) {
+                    falseAnsOne = chromatic[random] + " blues"
+                    count = count + 1
+                }
+                else if (count == 1) {
+                    falseAnsTwo = chromatic[random] + " pentatonic"
+                    count = count + 1
+                }
+                else if (count == 2) {
+                    falseAnsThree = chromatic[random] + " natural minor"
+                    count = count + 1
+                }
+            }
+        }
+        
+        //Generating question buttons
+        let correctButton = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        correctButton.center = CGPoint(x: width/2, y: (height/10)*4)
+        correctButton.setTitle(key + " pentanonic", for: .normal)
+        correctButton.setTitleColor(UIColor.white, for: .normal)
+        correctButton.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        correctButton.layer.shadowColor = UIColor.white.cgColor
+        correctButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+        correctButton.layer.shadowOpacity = 0.1
+        correctButton.layer.shadowRadius = 5
+        correctButton.showsTouchWhenHighlighted = false
+        //Add Target Code
+        correctButton.addTarget(self, action: #selector(showCorrect), for: .touchUpInside)
+        correctButton.layer.cornerRadius = 15
+        scalesQuiz.addSubview(correctButton)
+        
+        //Two false answers
+        let falseOne = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        falseOne.center = CGPoint(x: width/2, y: (height/10)*5)
+        falseOne.setTitle(falseAnsOne, for: .normal)
+        falseOne.setTitleColor(UIColor.white, for: .normal)
+        falseOne.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        falseOne.layer.shadowColor = UIColor.white.cgColor
+        falseOne.layer.shadowOffset = CGSize(width: 1, height: 3)
+        falseOne.layer.shadowOpacity = 0.1
+        falseOne.layer.shadowRadius = 5
+        falseOne.showsTouchWhenHighlighted = false
+        //Add Target Code
+        falseOne.addTarget(self, action: #selector(showFalse), for: .touchUpInside)
+        falseOne.layer.cornerRadius = 15
+        scalesQuiz.addSubview(falseOne)
+        
+        let falseTwo = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        falseTwo.center = CGPoint(x: width/2, y: (height/10)*6)
+        falseTwo.setTitle(falseAnsTwo, for: .normal)
+        falseTwo.setTitleColor(UIColor.white, for: .normal)
+        falseTwo.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        falseTwo.layer.shadowColor = UIColor.white.cgColor
+        falseTwo.layer.shadowOffset = CGSize(width: 1, height: 3)
+        falseTwo.layer.shadowOpacity = 0.1
+        falseTwo.layer.shadowRadius = 5
+        falseTwo.showsTouchWhenHighlighted = false
+        //Add Target Code
+        falseTwo.addTarget(self, action: #selector(showFalse), for: .touchUpInside)
+        falseTwo.layer.cornerRadius = 15
+        scalesQuiz.addSubview(falseTwo)
+        
+        let falseThree = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
+        falseThree.center = CGPoint(x: width/2, y: (height/10)*7)
+        falseThree.setTitle(falseAnsThree, for: .normal)
+        falseThree.setTitleColor(UIColor.white, for: .normal)
+        falseThree.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+        falseThree.layer.shadowColor = UIColor.white.cgColor
+        falseThree.layer.shadowOffset = CGSize(width: 1, height: 3)
+        falseThree.layer.shadowOpacity = 0.1
+        falseThree.layer.shadowRadius = 5
+        falseThree.showsTouchWhenHighlighted = false
+        //Add Target Code
+        falseThree.addTarget(self, action: #selector(showFalse), for: .touchUpInside)
+        falseThree.layer.cornerRadius = 15
+        scalesQuiz.addSubview(falseThree)
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            self.scalesQuiz.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+        })
+        
+    }
+    
+    @IBOutlet weak var falseView: UIView!
+    @objc func showFalse(_ sender: Any) {
+        falseView.isHidden = false
+        let height = falseView.frame.size.height
+        let width = falseView.frame.size.width
+        
+        //Adding blur effect to the background
+//        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = quizView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        quizView.addSubview(blurEffectView)
+        
+        //Background color
+        falseView.backgroundColor = UIColor.gray
+        falseView.layer.cornerRadius = 15
+        
+        //Adding title label
+        let correctTitle = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/5)))
+        correctTitle.center = CGPoint(x: width/2, y: (height/5))
+        correctTitle.textAlignment = .center
+        correctTitle.text = "Not quite!"
+        correctTitle.textColor = UIColor.white
+        correctTitle.adjustsFontSizeToFitWidth = true
+        correctTitle.font = correctTitle.font.withSize(28)
+        falseView.addSubview(correctTitle)
+        
+        //Adding description.
+        let correctDesc = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 30), height: (height/5)*1.5))
+        correctDesc.center = CGPoint(x: width/2, y: (height/5)*2.5)
+        correctDesc.textAlignment = .center
+        correctDesc.text = "That's not the right key. Remember, the key for a progression is the tonal center and gives resolution to the progression. If you're stuck, take a look at the circle of fifths."
+        correctDesc.textColor = UIColor.white
+        correctDesc.adjustsFontSizeToFitWidth = true
+        correctDesc.numberOfLines = 8
+        correctDesc.font = correctDesc.font.withSize(22)
+        falseView.addSubview(correctDesc)
+        
+        //Adding button to show scales OH BOY
+        let sendToScales = UIButton(frame: CGRect(x: 0, y: 0, width: 150, height: 45))
+        sendToScales.center = CGPoint(x: width/2, y: (height/5)*4)
+        sendToScales.setTitle("Try again", for: .normal)
+        sendToScales.setTitleColor(UIColor.white, for: .normal)
+        sendToScales.backgroundColor = UIColor(red: 250/255.0, green: 66/255.0, blue: 66/255.0, alpha: 1.0)
+        sendToScales.layer.shadowColor = UIColor.white.cgColor
+        sendToScales.layer.shadowOffset = CGSize(width: 1, height: 3)
+        sendToScales.layer.shadowOpacity = 0.1
+        sendToScales.layer.shadowRadius = 5
+        sendToScales.showsTouchWhenHighlighted = false
+        //Add Target Code
+        sendToScales.addTarget(self, action: #selector(resetFalse), for: .touchUpInside)
+        sendToScales.layer.cornerRadius = 15
+        falseView.addSubview(sendToScales)
+    }
+    
+    @objc func resetFalse(_ sender: Any?) {
+        falseView.isHidden = true
+        quizView.isHidden = false
+        
+    }
+    
+    
 
     override func viewDidLoad() {
 //        runDBData { ([String]) in
@@ -160,24 +702,21 @@ class QuizViewController: UIViewController {
 //        runDBData()
         
         populateMajorKeys()
-//        for key in majorKeys {
-//            print("-------------------")
-//            print(key.name)
-//            print(key.chords)
-//            print(key.majorNotes)
-//            print(key.pentNotes)
-//        }
+        populateMinorKeys()
+        for key in minorKeys {
+            print("-----------------")
+            print(key.name)
+            print(key.chords)
+            print(key.natural)
+        }
+        print(determineKey())
+        firstViewShow()
         
-        if (chordArr.count > 0) {
-            chord1.text = chordArr[0]
-            chord2.text = chordArr[1]
-            chord3.text = chordArr[2]
-            chord4.text = chordArr[3]
-        }
-        else {
-            chord1.text = "No chords yet"
-        }
-        determineKey()
+        //Animations for the first view
+        UIView.animate(withDuration: 0.5, delay: 0.0, animations: {
+            self.firstView.layer.opacity = 1.0
+        })
+        
         super.viewDidLoad()
     }
 

@@ -11,7 +11,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     struct MenuItem {
         var id : Int
         var title : String
