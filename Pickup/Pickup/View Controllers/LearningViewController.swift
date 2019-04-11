@@ -104,11 +104,7 @@ class LearningViewController: UIViewController {
                 self.currentNoteLabel.layer.opacity = 1.0
                 niceWorkLabel.layer.opacity = 1.0
             })
-            
         })
-        
-        
-        
     }
 
     

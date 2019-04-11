@@ -100,6 +100,7 @@ class QuizViewController: UIViewController {
         var name: String!
         var chords: [String]!
         var natural: [String]!
+        var pent: [String]!
         var index: Int!
     }
     
@@ -107,7 +108,7 @@ class QuizViewController: UIViewController {
     
     func setMinorKey(note: String) -> minorKey {
         setTempChromatic(note: (note))
-        var newKey = minorKey(name: note, chords:getMinorChords(note: note), natural: getMinorScaleNotes(note: note), index: 0)
+        var newKey = minorKey(name: note, chords:getMinorChords(note: note), natural: getMinorScaleNotes(note: note), pent: getMinorPentNotes(note: note), index: 0)
         return newKey
     }
     
@@ -150,6 +151,12 @@ class QuizViewController: UIViewController {
         minorArr.append(sixthNote)
         minorArr.append(seventhNote)
         return minorArr
+    }
+    
+    func getMinorPentNotes(note: String) -> [String] {
+//        let related = relative(match: note)
+        var minorPent = getPentScaleNotes(note: note)
+        return minorPent
     }
     
     //rearranges the chromatic starting from a certain index
@@ -205,32 +212,14 @@ class QuizViewController: UIViewController {
             match = relative(match: match)
         }
         
-//        for key in minorKeys {
-//            var index = 0
-//            for arrChord in testChordArr {
-//                if (arrChord == key.name) {
-//                    index = index + 2
-//                }
-//                for chord in key.chords {
-//                    if (arrChord == chord) {
-//                        index = index + 1
-//                    }
-//                }
-//            }
-//            if (index > max) {
-//                match = key.name
-//                max = index
-//            }
-//            else if (index == max) {
-//                match = testChordArr[0]
-//            }
-//        }
-        
         return match
     }
     
     func relative(match: String) -> String {
         let relativeArr = ["Am", "A#m", "Bm", "Cm", "C#m", "Dm", "D#m", "Em", "Fm", "F#m", "Gm", "G#m"]
+//        if (relativeArr.contains(match)) {
+//            let minorSpot
+//        }
         let spot = chromatic.index(of: match)
         return relativeArr[spot!]
     }
@@ -372,7 +361,7 @@ class QuizViewController: UIViewController {
         var falseAnsOne = ""
         var falseAnsTwo = ""
         while (count < 2) {
-            var random = Int.random(in: 0...11)
+            let random = Int.random(in: 0...11)
             if (chromatic[random] != key && (chromatic[random] != falseAnsOne)) {
                 if (count == 0) {
                     falseAnsOne = chromatic[random]
@@ -574,7 +563,7 @@ class QuizViewController: UIViewController {
         correctButton.layer.shadowRadius = 5
         correctButton.showsTouchWhenHighlighted = false
         //Add Target Code
-        correctButton.addTarget(self, action: #selector(showCorrect), for: .touchUpInside)
+        correctButton.addTarget(self, action: #selector(sendToScalesController), for: .touchUpInside)
         correctButton.layer.cornerRadius = 15
         scalesQuiz.addSubview(correctButton)
         
@@ -628,6 +617,37 @@ class QuizViewController: UIViewController {
             self.scalesQuiz.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
         })
         
+    }
+    
+    @objc func sendToScalesController(_ sender: Any?) {
+        print("Sending to scales controller")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Scales", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ScalesViewController") as! ScalesViewController
+        let key = determineKey()
+        var sendScale = [String]()
+        var sendName = ""
+        let charset = CharacterSet(charactersIn: "m")
+//        var sendScale = [String]()
+        if (key.rangeOfCharacter(from: charset) != nil) {
+            for keys in minorKeys {
+                if key == (keys.name + "m") {
+                    sendScale = keys.pent
+                    sendName = key + " pentatonic"
+                }
+            }
+        }
+        else {
+            for keys in majorKeys {
+                if key == keys.name {
+                    sendScale = keys.pentNotes
+                    sendName = key + " pentatonic"
+                }
+            }
+        }
+        vc.scale = sendScale
+        vc.scaleName = sendName
+        
+        self.show(vc, sender: self)
     }
     
     @IBOutlet weak var falseView: UIView!

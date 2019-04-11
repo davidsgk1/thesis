@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83114B6E2256694600CF02F7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83114B6D2256694500CF02F7 /* GridView.swift */; };
 		831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC91F22188A3B00112BFB /* AppDelegate.swift */; };
 		831BC92222188A3B00112BFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC92122188A3B00112BFB /* ViewController.swift */; };
 		831BC92522188A3B00112BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 831BC92322188A3B00112BFB /* Main.storyboard */; };
@@ -21,7 +22,10 @@
 		8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */; };
 		8397C1F422493AE600F26BF0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397C1F322493AE600F26BF0 /* QuizViewController.swift */; };
 		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
+		83BBE5AE225E695B0080D20F /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BBE5AD225E695B0080D20F /* ScaleView.swift */; };
 		83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */; };
+		83E7CA0D22557CEE003B4C0D /* ScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */; };
+		83E7CA1222558BF2003B4C0D /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E7CA1122557E4D003B4C0D /* Scales.storyboard */; };
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
 		83F177F422493CB9005EEC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83F177F322493CB9005EEC49 /* GoogleService-Info.plist */; };
@@ -79,6 +83,7 @@
 		2419AB24356546966AD345D7 /* Pods-PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83114B6D2256694500CF02F7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		831BC91C22188A3B00112BFB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831BC91F22188A3B00112BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		831BC92122188A3B00112BFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -112,7 +117,10 @@
 		83B2FF7D2218A5DF007E6C6C /* push-pod.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "push-pod.sh"; path = "Pickup/AudioKit-4.6/Frameworks/push-pod.sh"; sourceTree = "<group>"; };
 		83B2FF7E2218A5DF007E6C6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Pickup/AudioKit-4.6/Frameworks/README.md"; sourceTree = "<group>"; };
 		83B2FF8B2218A7F7007E6C6C /* AudioKit For iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "AudioKit For iOS.xcodeproj"; path = "Pickup/AudioKit-4.6/AudioKit/iOS/AudioKit For iOS.xcodeproj"; sourceTree = "<group>"; };
+		83BBE5AD225E695B0080D20F /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
 		83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = "/Users/keegan/thesis/Pickup/Pickup/View Controllers/Root View Controller/MenuTableViewCell.swift"; sourceTree = "<absolute>"; };
+		83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesViewController.swift; sourceTree = "<group>"; };
+		83E7CA1122557E4D003B4C0D /* Scales.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Scales.storyboard; path = /Users/keegan/thesis/Pickup/Pickup/Storyboards/Scales.storyboard; sourceTree = "<absolute>"; };
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		83F177F322493CB9005EEC49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -227,6 +235,9 @@
 				83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */,
 				833281F022316EC700B2C573 /* OnboardingPageViewController.swift */,
 				8397C1F322493AE600F26BF0 /* QuizViewController.swift */,
+				83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */,
+				83BBE5AD225E695B0080D20F /* ScaleView.swift */,
+				83114B6D2256694500CF02F7 /* GridView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 				83ED0D1F2218918E0001CE38 /* Learning1.storyboard */,
 				833281EE22316D9F00B2C573 /* Onboarding.storyboard */,
 				8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */,
+				83E7CA1122557E4D003B4C0D /* Scales.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -473,6 +485,7 @@
 				831BC92722188A3D00112BFB /* Assets.xcassets in Resources */,
 				833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */,
 				83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */,
+				83E7CA1222558BF2003B4C0D /* Scales.storyboard in Resources */,
 				8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */,
 				831BC92522188A3B00112BFB /* Main.storyboard in Resources */,
 			);
@@ -605,6 +618,9 @@
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
 				833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */,
 				83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */,
+				83BBE5AE225E695B0080D20F /* ScaleView.swift in Sources */,
+				83114B6E2256694600CF02F7 /* GridView.swift in Sources */,
+				83E7CA0D22557CEE003B4C0D /* ScalesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
