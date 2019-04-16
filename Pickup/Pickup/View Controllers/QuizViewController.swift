@@ -155,7 +155,25 @@ class QuizViewController: UIViewController {
     
     func getMinorPentNotes(note: String) -> [String] {
 //        let related = relative(match: note)
-        var minorPent = getPentScaleNotes(note: note)
+        var majorRef = getMajorScaleNotes(note: note)
+        var minorPent = [String]()
+        
+        //You need to set flats on the second and fifth note... perhaps search the chromatic to find the value before the note. Remember, you only use sharps so you need to convert them to sharps.
+        let startingNote = majorRef.index(of: note)!
+        let secondRef = majorRef[startingNote + 2]
+        setTempChromatic(note: secondRef)
+        let secondNote = tempChromatic.last!
+        let thirdNote = majorRef[startingNote + 3]
+        let fourthNote = majorRef[startingNote + 4]
+        let fifthRef = majorRef[startingNote + 6]
+        setTempChromatic(note: fifthRef)
+        let fifthNote = tempChromatic.last!
+        minorPent.append(note)
+        minorPent.append(secondNote)
+        minorPent.append(thirdNote)
+        minorPent.append(fourthNote)
+        minorPent.append(fifthNote)
+        
         return minorPent
     }
     
