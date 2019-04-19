@@ -19,30 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPy-Ri-Lfl">
-                                <rect key="frame" x="20" y="165" width="367" height="968"/>
+                                <rect key="frame" x="20" y="199" width="367" height="968"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emv-DB-Esr" customClass="GridView" customModule="Pickup">
-                                        <rect key="frame" x="20" y="8" width="321" height="1380"/>
+                                        <rect key="frame" x="22" y="8" width="299" height="2780"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNe-zg-ahK">
-                                <rect key="frame" x="20" y="76" width="237" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fg7-MY-7oX"/>
                     </view>
                     <connections>
                         <outlet property="grid" destination="emv-DB-Esr" id="cS4-EP-2yi"/>
-                        <outlet property="scaleNameLabel" destination="FNe-zg-ahK" id="BnM-GH-Bdt"/>
                         <outlet property="scrollView" destination="mPy-Ri-Lfl" id="lvZ-2s-rXz"/>
                     </connections>
                 </viewController>

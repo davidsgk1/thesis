@@ -26,6 +26,7 @@
 		83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */; };
 		83E7CA0D22557CEE003B4C0D /* ScalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */; };
 		83E7CA1222558BF2003B4C0D /* Scales.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E7CA1122557E4D003B4C0D /* Scales.storyboard */; };
+		83E85CEF226A815100838103 /* Inlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E85CEE226A815100838103 /* Inlay.swift */; };
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
 		83F177F422493CB9005EEC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83F177F322493CB9005EEC49 /* GoogleService-Info.plist */; };
@@ -121,6 +122,7 @@
 		83C213482225D6BD00265CE0 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTableViewCell.swift; path = "/Users/keegan/thesis/Pickup/Pickup/View Controllers/Root View Controller/MenuTableViewCell.swift"; sourceTree = "<absolute>"; };
 		83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesViewController.swift; sourceTree = "<group>"; };
 		83E7CA1122557E4D003B4C0D /* Scales.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Scales.storyboard; path = /Users/keegan/thesis/Pickup/Pickup/Storyboards/Scales.storyboard; sourceTree = "<absolute>"; };
+		83E85CEE226A815100838103 /* Inlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inlay.swift; sourceTree = "<group>"; };
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		83F177F322493CB9005EEC49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */,
 				83BBE5AD225E695B0080D20F /* ScaleView.swift */,
 				83114B6D2256694500CF02F7 /* GridView.swift */,
+				83E85CEE226A815100838103 /* Inlay.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				831BC92222188A3B00112BFB /* ViewController.swift in Sources */,
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
 				833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */,
+				83E85CEF226A815100838103 /* Inlay.swift in Sources */,
 				83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */,
 				83BBE5AE225E695B0080D20F /* ScaleView.swift in Sources */,
 				83114B6E2256694600CF02F7 /* GridView.swift in Sources */,
@@ -807,6 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHY7YKHY39;
 				INFOPLIST_FILE = Pickup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -834,6 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DHY7YKHY39;
 				INFOPLIST_FILE = Pickup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

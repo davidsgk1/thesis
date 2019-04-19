@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Play root notes of each chord into the microphone to form a chord progression.</string>
 </dict>
 </plist>
