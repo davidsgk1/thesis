@@ -9,7 +9,7 @@
 import UIKit
 //Setting up the table view
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, CALayerDelegate {
     
     struct MenuItem {
         var id : Int
@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400.0
+        return 500.0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -73,14 +73,125 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.layer.borderWidth = 20
         cell.layer.borderColor = UIColor.clear.cgColor
         
+        if (menu[indexPath.row].id == 0) {
+            //I'm going to try to add a custom button here for the cell
+            let firstButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+            firstButton.center = CGPoint(x: cell.bounds.width / 2, y: (cell.bounds.height / 4) * 3)
+            firstButton.setTitle("Build Progression", for: .normal)
+            firstButton.setTitleColor(UIColor.black, for: .normal)
+            firstButton.backgroundColor = UIColor.white
+            firstButton.layer.shadowColor = UIColor.black.cgColor
+            firstButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+            firstButton.layer.shadowOpacity = 0.1
+            firstButton.layer.shadowRadius = 5
+            firstButton.showsTouchWhenHighlighted = false
+            firstButton.layer.cornerRadius = 15
+            
+            //target code
+            firstButton.addTarget(self, action: #selector(sendToBuildProg), for: .touchUpInside)
+            cell.addSubview(firstButton)
+        }
+        
+        else if (menu[indexPath.row].id == 1) {
+            //I'm going to try to add a custom button here for the cell
+            let secondButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+            secondButton.center = CGPoint(x: cell.bounds.width / 2, y: (cell.bounds.height / 4) * 3)
+            secondButton.setTitle("Start Free Play", for: .normal)
+            secondButton.setTitleColor(UIColor.black, for: .normal)
+            secondButton.backgroundColor = UIColor.white
+            secondButton.layer.shadowColor = UIColor.black.cgColor
+            secondButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+            secondButton.layer.shadowOpacity = 0.1
+            secondButton.layer.shadowRadius = 5
+            secondButton.showsTouchWhenHighlighted = false
+            secondButton.layer.cornerRadius = 15
+            
+            //target code
+            secondButton.addTarget(self, action: #selector(sendToFreePlay), for: .touchUpInside)
+            cell.addSubview(secondButton)
+        }
+        
+        else if (menu[indexPath.row].id == 2) {
+            //I'm going to try to add a custom button here for the cell
+            let thirdButton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+            thirdButton.center = CGPoint(x: cell.bounds.width / 2, y: (cell.bounds.height / 4) * 3)
+            thirdButton.setTitle("Open Metronome", for: .normal)
+            thirdButton.setTitleColor(UIColor.black, for: .normal)
+            thirdButton.backgroundColor = UIColor.white
+            thirdButton.layer.shadowColor = UIColor.black.cgColor
+            thirdButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+            thirdButton.layer.shadowOpacity = 0.1
+            thirdButton.layer.shadowRadius = 5
+            thirdButton.showsTouchWhenHighlighted = false
+            thirdButton.layer.cornerRadius = 15
+            
+            //target code
+            thirdButton.addTarget(self, action: #selector(sendToMetronome), for: .touchUpInside)
+            cell.addSubview(thirdButton)
+        }
+        
         return cell
     }
     
+    @objc func sendToBuildProg(_ sender: Any) {
+        print("Send to build progression")
+        let storyboard: UIStoryboard = UIStoryboard(name: "Learning1", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LearningViewController") as! LearningViewController
+        self.show(vc, sender: self)
+        print("Success")
+    }
+    
+    @objc func sendToFreePlay(_ sender: Any) {
+        print("Send to free play")
+    }
+
+    @objc func sendToMetronome(_ sender: Any) {
+        print("Send to metronome")
+    }
     
 
+    private var gradient: CAGradientLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
         
+        let gradientView = UIView(frame: homeTableView.bounds)
+        gradient = CAGradientLayer()
+        gradient.delegate = self
+        
+        gradient.frame = homeTableView.bounds
+        gradient.colors = [UIColor.white.cgColor, UIColor.clear.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 0.9)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        
+//        view.layer.insertSublayer(gradient, at: 0)
+        
+        self.homeTableView.layer.mask = gradient
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        updateGradientFrame()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        updateGradientFrame()
+    }
+    
+    func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        return NSNull()
+    }
+    
+    private func updateGradientFrame() {
+        gradient.frame = CGRect(
+            x: 0,
+            y: homeTableView.contentOffset.y,
+            width: homeTableView.bounds.width,
+            height: homeTableView.bounds.height
+        )
     }
 
 
