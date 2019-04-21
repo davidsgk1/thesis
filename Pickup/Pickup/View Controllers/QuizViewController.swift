@@ -198,7 +198,7 @@ class QuizViewController: UIViewController {
         
     }
     
-    var testChordArr = ["Am", "Bdim", "C", "Am"]
+    var testChordArr = ["Em", "Am", "Bm", "Em"]
     //Loops through each key and determines which key the progression is in based on the matching chords
     func determineKey() -> String{
         //search each key for the most matching chords
@@ -206,7 +206,7 @@ class QuizViewController: UIViewController {
         var match = ""
         for key in majorKeys {
             var index = 0
-            for arrChord in testChordArr {
+            for arrChord in testChordArr{
                 if (arrChord == key.name) {
                     index = index + 2
                 }

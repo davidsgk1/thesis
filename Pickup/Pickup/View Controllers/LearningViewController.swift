@@ -199,7 +199,6 @@ class LearningViewController: UIViewController {
         tracker = AKFrequencyTracker(mic)
         silence = AKBooster(tracker, gain: 0)
         makeUI()
-
     }
     
     override func viewDidAppear(_ animated: Bool) {

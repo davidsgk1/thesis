@@ -39,7 +39,7 @@ class ScalesViewController: UIViewController, UIScrollViewDelegate {
 //        scaleNameLabel.text = scaleName
         
         
-        shapeHeight = (grid.frame.size.height / 4.5)
+        shapeHeight = (grid.frame.size.height / 9)
         
         print(scale)
         print(scaleName)
@@ -112,12 +112,20 @@ class ScalesViewController: UIViewController, UIScrollViewDelegate {
             scrollView.setContentOffset(CGPoint(x: 0, y: shapeHeight * 5), animated: true)
             posIndex = 5
         }
+        else if (posIndex == 5) {
+            scrollView.setContentOffset(CGPoint(x: 0, y: shapeHeight * 6), animated: true)
+            posIndex = 6
+        }
         posLabel.text = "Position " + String(posIndex)
     }
     
     @objc func scrollUp(_ sender: Any) {
         
-        if (posIndex == 5) {
+        if (posIndex == 6) {
+            scrollView.setContentOffset(CGPoint(x: 0, y: shapeHeight * 5), animated: true)
+            posIndex = 5
+        }
+        else if (posIndex == 5) {
             scrollView.setContentOffset(CGPoint(x: 0, y: shapeHeight * 4), animated: true)
             posIndex = 4
         }

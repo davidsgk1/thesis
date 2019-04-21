@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MainStoryboard-->
+        <scene sceneID="uJh-aj-iMR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MainViewController" storyboardName="Main" referencedIdentifier="MainStoryboard" id="GO2-bd-iB3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igv-vi-cpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1179" y="-95"/>
+        </scene>
         <!--Scales View Controller-->
         <scene sceneID="JZj-i4-n7F">
             <objects>
@@ -29,6 +37,14 @@
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7K6-eP-ZyD">
+                                <rect key="frame" x="20" y="44" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="exit"/>
+                                <connections>
+                                    <segue destination="GO2-bd-iB3" kind="show" id="dcg-u8-7hO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fg7-MY-7oX"/>
@@ -43,4 +59,7 @@
             <point key="canvasLocation" x="-557.97101449275362" y="251.78571428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exit" width="67" height="67"/>
+    </resources>
 </document>
