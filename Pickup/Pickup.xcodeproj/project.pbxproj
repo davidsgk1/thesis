@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8300DF1D226D657B00353E6F /* RigDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300DF1C226D657A00353E6F /* RigDetailViewController.swift */; };
 		83114B6E2256694600CF02F7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83114B6D2256694500CF02F7 /* GridView.swift */; };
 		831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC91F22188A3B00112BFB /* AppDelegate.swift */; };
 		831BC92222188A3B00112BFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831BC92122188A3B00112BFB /* ViewController.swift */; };
@@ -19,6 +20,9 @@
 		833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 833281EE22316D9F00B2C573 /* Onboarding.storyboard */; };
 		833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833281F022316EC700B2C573 /* OnboardingPageViewController.swift */; };
 		834AB2EA22238B61002701EB /* NoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834AB2E922238B61002701EB /* NoteButton.swift */; };
+		835D7283226D246F0035777F /* Rig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D7282226D246F0035777F /* Rig.storyboard */; };
+		835D7289226D2B1C0035777F /* RigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D7288226D2B1C0035777F /* RigTableViewController.swift */; };
+		835D728B226D33500035777F /* RigItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D728A226D33500035777F /* RigItem.swift */; };
 		8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */; };
 		8397C1F422493AE600F26BF0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397C1F322493AE600F26BF0 /* QuizViewController.swift */; };
 		83B2FF892218A5DF007E6C6C /* README.md in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B2FF7E2218A5DF007E6C6C /* README.md */; };
@@ -30,6 +34,7 @@
 		83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83ED0D1F2218918E0001CE38 /* Learning1.storyboard */; };
 		83ED0D222218977D0001CE38 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED0D212218977D0001CE38 /* LearningViewController.swift */; };
 		83F177F422493CB9005EEC49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83F177F322493CB9005EEC49 /* GoogleService-Info.plist */; };
+		83F9112F226D7AC700F3E603 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F9112E226D7AC700F3E603 /* AddItemViewController.swift */; };
 		A3FB5696F615D44316B548B4 /* Pods_PickupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */; };
 		B5600B388271F9501162330C /* Pods_PickupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8730D889BB11DD77CF47B976 /* Pods_PickupTests.framework */; };
 		FB9B26DDAA4739F1CACAA574 /* Pods_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B158118C42757E5770852FCF /* Pods_Pickup.framework */; };
@@ -84,6 +89,7 @@
 		2419AB24356546966AD345D7 /* Pods-PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7984CF995A099B42DF2A8C9B /* Pods-PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-PickupUITests/Pods-PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7E6E2AF9EAE325F4D4A4BEB3 /* Pods_PickupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8300DF1C226D657A00353E6F /* RigDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RigDetailViewController.swift; sourceTree = "<group>"; };
 		83114B6D2256694500CF02F7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		831BC91C22188A3B00112BFB /* Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pickup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		831BC91F22188A3B00112BFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 		833281EE22316D9F00B2C573 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		833281F022316EC700B2C573 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		834AB2E922238B61002701EB /* NoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteButton.swift; sourceTree = "<group>"; };
+		835D7282226D246F0035777F /* Rig.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Rig.storyboard; path = Pickup/Storyboards/Rig.storyboard; sourceTree = SOURCE_ROOT; };
+		835D7288226D2B1C0035777F /* RigTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RigTableViewController.swift; path = "/Users/keegan/thesis/Pickup/Pickup/View Controllers/RigTableViewController.swift"; sourceTree = "<absolute>"; };
+		835D728A226D33500035777F /* RigItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RigItem.swift; path = "Pickup/View Controllers/RigItem.swift"; sourceTree = SOURCE_ROOT; };
 		8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizStoryboard.storyboard; sourceTree = "<group>"; };
 		8397C1F322493AE600F26BF0 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		83A8ABDE2218A536008A7B67 /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = "Pickup/AudioKit-4.6/Frameworks"; sourceTree = "<group>"; };
@@ -126,6 +135,7 @@
 		83ED0D1F2218918E0001CE38 /* Learning1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Learning1.storyboard; sourceTree = "<group>"; };
 		83ED0D212218977D0001CE38 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		83F177F322493CB9005EEC49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83F9112E226D7AC700F3E603 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddItemViewController.swift; path = "Pickup/View Controllers/AddItemViewController.swift"; sourceTree = SOURCE_ROOT; };
 		8730D889BB11DD77CF47B976 /* Pods_PickupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B158118C42757E5770852FCF /* Pods_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39909D19324D9C88B8FA481 /* Pods-PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickupTests.release.xcconfig"; path = "Target Support Files/Pods-PickupTests/Pods-PickupTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,9 +248,13 @@
 				833281F022316EC700B2C573 /* OnboardingPageViewController.swift */,
 				8397C1F322493AE600F26BF0 /* QuizViewController.swift */,
 				83E7CA0C22557CEE003B4C0D /* ScalesViewController.swift */,
+				835D7288226D2B1C0035777F /* RigTableViewController.swift */,
 				83BBE5AD225E695B0080D20F /* ScaleView.swift */,
 				83114B6D2256694500CF02F7 /* GridView.swift */,
 				83E85CEE226A815100838103 /* Inlay.swift */,
+				835D728A226D33500035777F /* RigItem.swift */,
+				8300DF1C226D657A00353E6F /* RigDetailViewController.swift */,
+				83F9112E226D7AC700F3E603 /* AddItemViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -261,6 +275,7 @@
 				83ED0D1F2218918E0001CE38 /* Learning1.storyboard */,
 				833281EE22316D9F00B2C573 /* Onboarding.storyboard */,
 				8397C1F1224939BD00F26BF0 /* QuizStoryboard.storyboard */,
+				835D7282226D246F0035777F /* Rig.storyboard */,
 				83E7CA1122557E4D003B4C0D /* Scales.storyboard */,
 			);
 			path = Storyboards;
@@ -487,6 +502,7 @@
 				831BC95922188B9F00112BFB /* Localizable.strings in Resources */,
 				831BC92722188A3D00112BFB /* Assets.xcassets in Resources */,
 				833281EF22316D9F00B2C573 /* Onboarding.storyboard in Resources */,
+				835D7283226D246F0035777F /* Rig.storyboard in Resources */,
 				83ED0D202218918E0001CE38 /* Learning1.storyboard in Resources */,
 				83E7CA1222558BF2003B4C0D /* Scales.storyboard in Resources */,
 				8397C1F2224939BD00F26BF0 /* QuizStoryboard.storyboard in Resources */,
@@ -619,12 +635,16 @@
 				834AB2EA22238B61002701EB /* NoteButton.swift in Sources */,
 				831BC92222188A3B00112BFB /* ViewController.swift in Sources */,
 				831BC92022188A3B00112BFB /* AppDelegate.swift in Sources */,
+				83F9112F226D7AC700F3E603 /* AddItemViewController.swift in Sources */,
 				833281F122316EC700B2C573 /* OnboardingPageViewController.swift in Sources */,
+				8300DF1D226D657B00353E6F /* RigDetailViewController.swift in Sources */,
 				83E85CEF226A815100838103 /* Inlay.swift in Sources */,
 				83C213492225D6BD00265CE0 /* MenuTableViewCell.swift in Sources */,
+				835D7289226D2B1C0035777F /* RigTableViewController.swift in Sources */,
 				83BBE5AE225E695B0080D20F /* ScaleView.swift in Sources */,
 				83114B6E2256694600CF02F7 /* GridView.swift in Sources */,
 				83E7CA0D22557CEE003B4C0D /* ScalesViewController.swift in Sources */,
+				835D728B226D33500035777F /* RigItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

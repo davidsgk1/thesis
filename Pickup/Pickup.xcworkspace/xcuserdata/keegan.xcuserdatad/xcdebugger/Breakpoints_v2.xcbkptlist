@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.535687"
+            timestampString = "577601338.779282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.53583"
+            timestampString = "577601338.779355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "181"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.535959"
+            timestampString = "577601338.779404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "202"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536097"
+            timestampString = "577601338.779449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "232"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536242"
+            timestampString = "577601338.779495"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.53634"
+            timestampString = "577601338.7795399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "244"
@@ -198,7 +198,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536406"
+            timestampString = "577601338.7795841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "246"
@@ -214,7 +214,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536533"
+            timestampString = "577601338.7796299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "649"
@@ -230,7 +230,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536613"
+            timestampString = "577601338.779673"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "664"
@@ -246,7 +246,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536688"
+            timestampString = "577601338.7797149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "651"
@@ -262,7 +262,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.536808"
+            timestampString = "577601338.779758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "650"
@@ -278,7 +278,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.5369329"
+            timestampString = "577601338.779802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
@@ -294,7 +294,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.537076"
+            timestampString = "577601338.779844"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "643"
@@ -310,7 +310,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pickup/View Controllers/QuizViewController.swift"
-            timestampString = "577576957.53719"
+            timestampString = "577601338.779886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "164"
@@ -332,6 +332,353 @@
             startingLineNumber = "86"
             endingLineNumber = "86"
             landmarkName = "draw(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.749294"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.749804"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigItem.swift"
+            timestampString = "577604819.7501301"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "init(type:name:color:year:serialNum:extras:key:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 6 of Pickup.RigItem.init(type: Swift.String, name: Swift.String, color: Swift.String, year: Swift.String, serialNum: Swift.String, extras: Swift.String, key: Swift.String) -&gt; Pickup.RigItem"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigItem.swift"
+                  timestampString = "577587396.88131"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigItem.init(type: Swift.String, name: Swift.String, color: Swift.String, year: Swift.String, serialNum: Swift.String, extras: Swift.String, key: Swift.String) -&gt; Pickup.RigItem"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigItem.swift"
+                  timestampString = "577587396.884876"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "279">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigItem.swift"
+            timestampString = "577604819.750187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(snapshot:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigItem.swift"
+            timestampString = "577604819.750234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "toAnyObject()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.75028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "RigTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.items.getter : Swift.Array&lt;Pickup.RigItem&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.1457829"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.items.setter : Swift.Array&lt;Pickup.RigItem&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.148243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.items.modify : Swift.Array&lt;Pickup.RigItem&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.150473"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.items.modify : Swift.Array&lt;Pickup.RigItem&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.1528341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.init(style: __C.UITableViewStyle) -&gt; Pickup.RigTableViewController"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.155116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pickup.RigTableViewController"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.157336"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "177">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pickup.RigTableViewController&gt;"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.159633"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.750576"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pickup.RigTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.172465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "363">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in Pickup.RigTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Pickup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/keegan/thesis/Pickup/Pickup/View%20Controllers/RigTableViewController.swift"
+                  timestampString = "577586706.1753401"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "243">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.75085"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.7511261"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.751387"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pickup/View Controllers/RigTableViewController.swift"
+            timestampString = "577604819.751651"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

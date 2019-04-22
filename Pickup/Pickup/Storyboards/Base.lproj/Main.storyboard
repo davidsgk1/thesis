@@ -94,18 +94,28 @@
                                     <segue destination="I5P-Xf-15J" kind="show" id="EPV-rm-h7l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-2O-9Vz">
-                                <rect key="frame" x="172" y="764" width="30" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-Ys-et2">
+                                <rect key="frame" x="152" y="39" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-2O-9Vz">
+                                <rect key="frame" x="114" y="728" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="onboardingIcon"/>
                                 <connections>
                                     <segue destination="yEi-We-avp" kind="show" id="EZe-KV-Om1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-Ys-et2">
-                                <rect key="frame" x="152" y="39" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-HN-GJ1">
+                                <rect key="frame" x="210" y="728" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Button" image="rigIcon"/>
+                                <connections>
+                                    <segue destination="dLk-9y-DA9" kind="popoverPresentation" popoverAnchorView="rqB-HN-GJ1" id="npy-LU-RG4">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -133,7 +143,15 @@
                 <viewControllerPlaceholder storyboardName="QuizStoryboard" referencedIdentifier="QuizViewController" id="I5P-Xf-15J" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPV-xa-Ael" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="318"/>
+            <point key="canvasLocation" x="1709" y="151"/>
+        </scene>
+        <!--RigNavViewController-->
+        <scene sceneID="2Pc-SM-bCq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Rig" storyboardName="Rig" referencedIdentifier="RigNavViewController" id="dLk-9y-DA9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9O-hL-tCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="383"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TwR-y3-vjW">
@@ -156,6 +174,7 @@
     </scenes>
     <resources>
         <image name="firstOnboarding" width="181.33332824707031" height="181.33332824707031"/>
-        <image name="onboardingIcon" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="onboardingIcon" width="105.33333587646484" height="105.33333587646484"/>
+        <image name="rigIcon" width="105.33333587646484" height="105.33333587646484"/>
     </resources>
 </document>
