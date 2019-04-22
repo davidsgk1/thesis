@@ -35,7 +35,7 @@ class AddItemViewController: UIViewController {
         let sHeight = self.view.frame.height
         
         let addButton = UIButton(frame: CGRect(x: 0, y: 0, width: 290, height: 60))
-        addButton.center = CGPoint(x: sWidth/2, y: (sHeight/10)*8)
+        addButton.center = CGPoint(x: sWidth/2, y: (sHeight/12)*10)
         addButton.setTitle("Add Item", for: .normal)
         addButton.setTitleColor(UIColor.white, for: .normal)
         addButton.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
@@ -56,46 +56,39 @@ class AddItemViewController: UIViewController {
         let type = gearType.text
         let year = gearYear.text
         let color = gearColor.text
-        var serialNum = gearSerialNum.text
-        var extras = gearExtras.text
+        let serialNum = gearSerialNum.text ?? ""
+        let extras = gearExtras.text ?? ""
         
-        if (name == nil) {
+        if (name == "") {
             let alert = UIAlertController(title: "Hold up!", message: "Please enter a name.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            return
         }
-        else if (type == nil) {
+        else if (type == "") {
             let alert = UIAlertController(title: "Hold up!", message: "Please enter a type for your gear (like electric guitar).", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            return
         }
-        else if (year == nil) {
+        else if (year == "") {
             let alert = UIAlertController(title: "Hold up!", message: "Please enter a production year.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            return
         }
-        else if (color == nil) {
+        else if (color == "") {
             let alert = UIAlertController(title: "Hold up!", message: "Please enter a color or finish for your gear.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            return
         }
-        else if (serialNum == nil) {
-            serialNum = "Unknown serial #"
+        else {
+            let newItem = RigItem(type: type!, name: name!, color: color!, year: year!, serialNum: serialNum, extras: extras)
+            let rigItemsRef = self.ref.child(name!.lowercased())
+            rigItemsRef.setValue(newItem.toAnyObject())
+            
+            let storyboard: UIStoryboard = UIStoryboard(name: "Rig", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "RigNavViewController") as! UINavigationController
+            self.show(vc, sender: self)
         }
-        else if (extras == nil) {
-            extras = ""
-        }
-        let newItem = RigItem(type: type!, name: name!, color: color!, year: year!, serialNum: serialNum!, extras: extras!)
-        let rigItemsRef = self.ref.child(name!.lowercased())
-        rigItemsRef.setValue(newItem.toAnyObject())
-        
-        let storyboard: UIStoryboard = UIStoryboard(name: "Rig", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RigNavViewController") as! UINavigationController
-        self.show(vc, sender: self)
+    
     }
 
     /*

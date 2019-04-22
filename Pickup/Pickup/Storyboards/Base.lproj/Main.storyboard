@@ -94,10 +94,6 @@
                                     <segue destination="I5P-Xf-15J" kind="show" id="EPV-rm-h7l"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstOnboarding" translatesAutoresizingMaskIntoConstraints="NO" id="XIx-Ys-et2">
-                                <rect key="frame" x="152" y="39" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-2O-9Vz">
                                 <rect key="frame" x="114" y="728" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -116,6 +112,10 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="justIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-LJ-WDN">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -173,7 +173,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="firstOnboarding" width="181.33332824707031" height="181.33332824707031"/>
+        <image name="justIcon" width="58" height="58"/>
         <image name="onboardingIcon" width="105.33333587646484" height="105.33333587646484"/>
         <image name="rigIcon" width="105.33333587646484" height="105.33333587646484"/>
     </resources>
