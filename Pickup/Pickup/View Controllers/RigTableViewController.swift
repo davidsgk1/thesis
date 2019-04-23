@@ -13,16 +13,16 @@ class RigTableViewController: UITableViewController {
     var items: [RigItem] = []
     let ref = Database.database().reference(withPath: "rig-items")
 
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-
+    //193
+    //130
+    //204
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.allowsMultipleSelectionDuringEditing = false
+        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 193/255.0, green: 130/255.0, blue: 204/255.0, alpha: 1.0)
         
         ref.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
             var newItems: [RigItem] = []
@@ -68,25 +68,34 @@ class RigTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        print(items.count)
         return items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RigTableViewCell
     
         let currentItem = items[indexPath.row]
         
-//        let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: sWidth, height: sHeight/5))
-//        nameLabel.center = CGPoint(x: sWidth/2, y: sHeight/5)
-//        nameLabel.textAlignment = .center
-//        nameLabel.text = currentItem.name
-//        cell.addSubview(nameLabel)
-        
-        cell.textLabel?.text = currentItem.name
-        cell.detailTextLabel?.text = currentItem.year
+        cell.titleLabel?.text = currentItem.name
+        cell.descLabel?.text = currentItem.year + " " + currentItem.type
 
+        var type = currentItem.type.lowercased()
+        if (type.contains("guitar")) {
+            let guitar = UIImage(named: "guitarRig")
+            cell.thumbnail.image = guitar
+        }
+        else if (type.contains("pedal")) {
+            let pedal = UIImage(named: "pedalRig")
+            cell.thumbnail.image = pedal
+        }
+        else if (type.contains("amp") || type.contains("speaker") || type.contains("cabinet")) {
+            let amp = UIImage(named: "ampRig")
+            cell.thumbnail.image = amp
+        }
+        else {
+            let misc = UIImage(named: "miscRig")
+            cell.thumbnail.image = misc
+        }
         // Configure the cell...
 
         return cell

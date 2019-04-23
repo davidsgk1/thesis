@@ -81,9 +81,11 @@ class RigDetailViewController: UIViewController, UINavigationControllerDelegate,
             case 4:
                 thisLabel.text = extras
                 thisLabel.numberOfLines = 3
+                thisLabel.adjustsFontSizeToFitWidth = false
             default:
                 thisLabel.text = "Could not add."
             }
+            
             descView.addSubview(thisLabel)
         }
         descView.isHidden = false

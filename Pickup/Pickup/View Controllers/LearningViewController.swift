@@ -78,9 +78,9 @@ class LearningViewController: UIViewController {
         popUpView.center = CGPoint(x: screenWidth/2, y: screenHeight/2)
         self.popUpView.layer.cornerRadius = popUpView.frame.size.width / 2
         self.popUpView.transform = CGAffineTransform(rotationAngle: CGFloat(360 * Double.pi / 180))
-        
+
         UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseOut, animations: {
-            
+
             self.popUpView.transform = CGAffineTransform(rotationAngle: CGFloat(-360 * Double.pi / 180))
             self.popUpView.layer.cornerRadius = 25
             //Random background colors
@@ -88,23 +88,35 @@ class LearningViewController: UIViewController {
             let green = CGFloat((arc4random() % 256)) / 255.0
             let blue  = CGFloat((arc4random() % 256)) / 255.0
             let alpha = CGFloat(1.0)
-            
-            UIView.animate(withDuration: 0.5, delay: 0.0, options: .autoreverse, animations: {
+
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: .autoreverse, animations: {
                 self.popUpView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
             }, completion:nil)
-            
+
             UIView.animate(withDuration: 0.2, delay: 0.3, animations: {
                 self.popUpView.layer.cornerRadius = 0
                 self.popUpView.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
                 self.popUpView.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
             })
-            
+
             UIView.animate(withDuration: 0.2, delay: 0.7, options: .curveEaseIn, animations: {
                 nextChordButton.layer.opacity = 1.0
                 self.currentNoteLabel.layer.opacity = 1.0
                 niceWorkLabel.layer.opacity = 1.0
             })
         })
+//        self.popUpView.backgroundColor = UIColor(red: 250/255.0, green: 179/255.0, blue: 0/255.0, alpha: 1.0)
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.popUpView.transform = CGAffineTransform(scaleX: 10.0, y: 10.0)
+//            self.popUpView.layer.cornerRadius = 0
+//        })
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.popUpView.backgroundColor = UIColor(red: 115/255.0, green: 175/255.0, blue: 89/255.0, alpha: 1.0)
+//            self.popUpView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+//        })
+//        nextChordButton.layer.opacity = 1.0
+//        self.currentNoteLabel.layer.opacity = 1.0
+//        niceWorkLabel.layer.opacity = 1.0
     }
 
     

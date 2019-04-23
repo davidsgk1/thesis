@@ -94,8 +94,12 @@
                                     <segue destination="I5P-Xf-15J" kind="show" id="EPV-rm-h7l"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="justIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-LJ-WDN">
+                                <rect key="frame" x="162" y="40" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-2O-9Vz">
-                                <rect key="frame" x="114" y="728" width="50" height="50"/>
+                                <rect key="frame" x="114" y="716" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="onboardingIcon"/>
                                 <connections>
@@ -103,7 +107,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqB-HN-GJ1">
-                                <rect key="frame" x="210" y="728" width="50" height="50"/>
+                                <rect key="frame" x="210" y="716" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="rigIcon"/>
                                 <connections>
@@ -112,10 +116,6 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="justIcon" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-LJ-WDN">
-                                <rect key="frame" x="162" y="40" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

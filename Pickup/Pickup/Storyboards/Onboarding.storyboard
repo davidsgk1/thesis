@@ -269,7 +269,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="exit" width="19.666666030883789" height="19.666666030883789"/>
+        <image name="exit" width="44.666667938232422" height="44.666667938232422"/>
         <image name="finalOnboarding" width="196" height="196"/>
         <image name="finalOnboardingBackground" width="289" height="433.33334350585938"/>
         <image name="firstOnboarding" width="181.33332824707031" height="181.33332824707031"/>

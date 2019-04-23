@@ -12,19 +12,20 @@ class OnboardingPageViewController: UIPageViewController {
     
     weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
     
-//    var pageControl = UIPageControl()
-//    
-//    func configurePageControl() {
-//        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 30,width: UIScreen.main.bounds.width,height: 30))
-//        self.pageControl.numberOfPages = orderedViewControllers.count
-//        self.pageControl.currentPage = 0
-//        self.pageControl.alpha = 0.5
-//        self.pageControl.tintColor = UIColor.clear
-//        self.pageControl.pageIndicatorTintColor = UIColor.clear
-//        self.pageControl.currentPageIndicatorTintColor = UIColor.white
-//        self.pageControl.backgroundColor = UIColor.clear
-//        self.view.addSubview(pageControl)
-//    }
+    var pageControl = UIPageControl()
+    
+    func configurePageControl() {
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 30,width: UIScreen.main.bounds.width,height: 15))
+        self.pageControl.numberOfPages = orderedViewControllers.count
+        self.pageControl.currentPage = 0
+        self.pageControl.alpha = 0.5
+        self.pageControl.tintColor = UIColor.clear
+        self.pageControl.pageIndicatorTintColor = UIColor.darkGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.white
+        self.pageControl.backgroundColor = UIColor.clear
+        self.pageControl.layer.backgroundColor = UIColor.clear.cgColor
+        self.view.addSubview(pageControl)
+    }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newColoredViewController(color: "First"),
@@ -43,8 +44,13 @@ class OnboardingPageViewController: UIPageViewController {
         if let firstViewController = orderedViewControllers.first {
             scrollToViewController(viewController: firstViewController)
         }
+        configurePageControl()
         
         onboardingDelegate?.onboardingPageViewController(onboardingPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
     }
     
     func scrollToNextViewController() {
@@ -81,6 +87,7 @@ class OnboardingPageViewController: UIPageViewController {
     private func notifyOnboardingDelegateOfNewIndex() {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.firstIndex(of: firstViewController) { onboardingDelegate?.onboardingPageViewController(onboardingPageViewController: self, didUpdatePageIndex: index)
+            self.pageControl.currentPage = index
             }
         }
 }

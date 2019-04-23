@@ -198,7 +198,7 @@ class QuizViewController: UIViewController {
         
     }
     
-    var testChordArr = ["Em", "Am", "Bm", "Em"]
+    var testChordArr = ["Fm", "Cm", "Cm", "Fm"]
     //Loops through each key and determines which key the progression is in based on the matching chords
     func determineKey() -> String{
         //search each key for the most matching chords
@@ -206,7 +206,7 @@ class QuizViewController: UIViewController {
         var match = ""
         for key in majorKeys {
             var index = 0
-            for arrChord in testChordArr{
+            for arrChord in chordArr {
                 if (arrChord == key.name) {
                     index = index + 2
                 }
@@ -221,12 +221,12 @@ class QuizViewController: UIViewController {
                 max = index
             }
             else if (index == max) {
-                match = testChordArr[0]
+                match = chordArr[0]
             }
         }
         
         let charset = CharacterSet(charactersIn: "m")
-        if (testChordArr[0].rangeOfCharacter(from: charset) != nil) {
+        if (chordArr[0].rangeOfCharacter(from: charset) != nil) {
             match = relative(match: match)
         }
         
@@ -238,6 +238,14 @@ class QuizViewController: UIViewController {
 //        if (relativeArr.contains(match)) {
 //            let minorSpot
 //        }
+//        if (chromatic.contains(match)) {
+//            let spot = chromatic.index(of: match)
+//        }
+//        let spot = chromatic[relativeArr.index(of: match)]
+        let charset = CharacterSet(charactersIn: "m")
+        if (match.rangeOfCharacter(from: charset) != nil) {
+            return match
+        }
         let spot = chromatic.index(of: match)
         return relativeArr[spot!]
     }
@@ -258,7 +266,7 @@ class QuizViewController: UIViewController {
         let firstChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
         firstChordLabel.center = CGPoint(x: screenWidth/2, y: screenHeight/10)
         firstChordLabel.textAlignment = .center
-        firstChordLabel.text = testChordArr[0]
+        firstChordLabel.text = chordArr[0]
         firstChordLabel.textColor = UIColor.white
         firstChordLabel.adjustsFontSizeToFitWidth = true
         firstChordLabel.font = firstChordLabel.font.withSize(45)
@@ -272,7 +280,7 @@ class QuizViewController: UIViewController {
         let secondChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
         secondChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*2.5)
         secondChordLabel.textAlignment = .center
-        secondChordLabel.text = testChordArr[1]
+        secondChordLabel.text = chordArr[1]
         secondChordLabel.textColor = UIColor.white
         secondChordLabel.adjustsFontSizeToFitWidth = true
         secondChordLabel.font = firstChordLabel.font.withSize(45)
@@ -287,7 +295,7 @@ class QuizViewController: UIViewController {
         let thirdChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
         thirdChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*4)
         thirdChordLabel.textAlignment = .center
-        thirdChordLabel.text = testChordArr[2]
+        thirdChordLabel.text = chordArr[2]
         thirdChordLabel.textColor = UIColor.white
         thirdChordLabel.adjustsFontSizeToFitWidth = true
         thirdChordLabel.font = firstChordLabel.font.withSize(45)
@@ -302,7 +310,7 @@ class QuizViewController: UIViewController {
         let fourthChordLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (100), height: 100))
         fourthChordLabel.center = CGPoint(x: screenWidth/2, y: (screenHeight/10)*5.5)
         fourthChordLabel.textAlignment = .center
-        fourthChordLabel.text = testChordArr[3]
+        fourthChordLabel.text = chordArr[3]
         fourthChordLabel.textColor = UIColor.white
         fourthChordLabel.adjustsFontSizeToFitWidth = true
         fourthChordLabel.font = firstChordLabel.font.withSize(45)
@@ -366,7 +374,7 @@ class QuizViewController: UIViewController {
         let chordProgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (sWidth - 150), height: (sHeight/10)))
         chordProgLabel.center = CGPoint(x:sWidth/2, y: (sHeight/10)*2.5)
         chordProgLabel.textAlignment = .center
-        chordProgLabel.text = testChordArr[0] + "   " + testChordArr[1] + "   " + testChordArr[2] + "   " + testChordArr[3]
+        chordProgLabel.text = chordArr[0] + "   " + chordArr[1] + "   " + chordArr[2] + "   " + chordArr[3]
         chordProgLabel.textColor = UIColor.white
         chordProgLabel.numberOfLines = 3
         chordProgLabel.adjustsFontSizeToFitWidth = true
@@ -539,7 +547,7 @@ class QuizViewController: UIViewController {
         let chordProgLabel = UILabel(frame: CGRect(x: 0, y: 0, width: (width - 150), height: (height/10)))
         chordProgLabel.center = CGPoint(x:width/2, y: (height/10)*2.5)
         chordProgLabel.textAlignment = .center
-        chordProgLabel.text = testChordArr[0] + "   " + testChordArr[1] + "   " + testChordArr[2] + "   " + testChordArr[3]
+        chordProgLabel.text = chordArr[0] + "   " + chordArr[1] + "   " + chordArr[2] + "   " + chordArr[3]
         chordProgLabel.textColor = UIColor.white
         chordProgLabel.numberOfLines = 3
         chordProgLabel.adjustsFontSizeToFitWidth = true
